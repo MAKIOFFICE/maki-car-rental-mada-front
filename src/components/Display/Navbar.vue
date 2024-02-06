@@ -68,14 +68,22 @@
   
 <script setup>
 import { useRouter } from 'vue-router';
+import HomeService from '@/service/test';
+import { ref } from 'vue';
 
 const router = useRouter();
 
 const locationbtn = () => {
     router.push('/');
 }
-const handleBtn = () => {
+const handleBtn = async () => {
     router.push('/about');
+    try {
+        const data = await HomeService.getHomeData();
+        console.log(data);
+    } catch (error) {
+
+    }
 }
 const faqBtn = () => {
     router.push('/faq');
