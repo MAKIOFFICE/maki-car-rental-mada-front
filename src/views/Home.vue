@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>page home</h1>
     <div class="banner">
     <!--debut division 1  -->
     <div class="container ">
