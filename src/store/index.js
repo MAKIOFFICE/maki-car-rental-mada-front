@@ -1,4 +1,5 @@
-import { createStore, StoreOptions } from 'vuex';
+import { createStore } from 'vuex';
+// Importer les modules ici
 
 const store = createStore({
     modules: {
