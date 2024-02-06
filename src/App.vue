@@ -1,18 +1,13 @@
 <script setup>
-import { useRouter } from 'vue-router';
+import Navbar from './components/Display/Navbar.vue';
 
-const router = useRouter();
-
-const handleBtn = () => {
-  router.push('/about');
-}
 
 </script>
   
 
 <template>
   <div>
-    <button @click="handleBtn">btn</button>
+    <Navbar />
     <router-view v-slot="{ Component }">
       <transition appear name="fade-page" mode="out-in">
         <component :is="Component" />
