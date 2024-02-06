@@ -201,7 +201,7 @@
                 <div class="row conduire">
                     <div class="col-md-12">
                         <h1>Pourquoi conduire une voiture à Praslin ?</h1>
-                        <img src="" alt="Anse Intendance Mahé" class="img-fluid">
+                        <img src="../assets/image/HomeImg/isalo.jpg" alt="Anse Intendance Mahé" class="img-fluid">
                         <span>L</span>
                         <p>e fait d'avoir une voiture de location à votre disposition en arrivant à Mahé va vous faciliter la vie et vous permettra de découvrir les beautés de l'île. Tandis que la côte nord déploie un paysage impressionnant, la côte ouest vous dévoile ses splendides baies. L'excursion vers Sans Souci à travers les plantations de thé, et la visite de la capitale, Victoria, sont également des trajets qui valent le détour. Vous pouvez découvrir l'île en quelques heures, en vous arrêtant sur des plages ou tout autre point d'intérêt. Si vous avez opté pour un bed & breakfast, ou un logement indépendant, la meilleure façon d'aller faire les courses est d'utiliser une voiture. Cela vous permettra également d'accéder aux magasins fréquentés par les locaux, où les prix sont plus raisonnables que les petits commerces situés tout au long de la côte. Le Jardin Botanique de Victoria est un lieu à ne pas manquer, avec sa vaste collection de plantes exotiques réparties sur cinq hectares de jardins tropicaux, habitat des tortues géantes. Puis, sur la côte nord-ouest, se trouve la plage de Beau Vallon, l'une des plages les plus animées de Mahé. Pour les amateurs de surf et de grosses vagues, nous recommandons Anse Intendance ou Grand Anse. Les plus romantiques peuvent se rendre sur la plage d'Anse Takamaka. Ses plages de sable doré et ses vagues turquoises créent l'ambiance parfaite pour les jeunes mariés. Cependant, les routes de Mahé, escarpées et étroites, ont une circulation réduite, c'est pourquoi il faut toujours être vigilent.</p>
                     </div>
@@ -212,9 +212,9 @@
                 <div class="row conduireTwo">
                     <div class="col-md-12">
                         <h1>Pourquoi conduire une voiture à Mahé ?</h1>
-                        <img alt="Anse Kerlan Praslin" class="img-responsive" src="">
+                        <img alt="Anse Kerlan Praslin" class="img-responsive" src="../assets/image/HomeImg/baobab.jpg">
                         <span>L'</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta exercitationem saepe, inventore iste, fugit aliquam nulla in, repellendus ut laudantium reiciendis rem quo distinctio eaque hic enim modi quod commodi?</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, quisquam voluptatem? Dolore eligendi id laborum nemo delectus. Quia aut, nulla nesciunt accusantium eos est totam tenetur vero rerum nihil molestias laudantium nostrum tempora dolorem? Nulla, vitae. Explicabo adipisci voluptatibus facere molestias quaerat tempora! Tempora assumenda totam dolorum, quas quidem debitis voluptate accusamus vitae. Consequatur aspernatur ad, vel ipsam, numquam atque sit ab omnis eius suscipit fuga molestias accusamus recusandae cum dolorum quasi asperiores quas iure aperiam fugiat, animi ex temporibus molestiae obcaecati. Nulla quaerat dolorum natus asperiores nisi vitae commodi error in quasi. Quod, exercitationem corporis deserunt omnis nam tempore?</p>
                     </div>
                 </div>
             </div>
@@ -368,7 +368,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="text-white">
-                    <img src="" class="imgmakiU">
+                    <img src="../assets/image/HomeImg/maki.jpg" class="imgmakiU">
                 </div>
             </div>
             <div class="col-md-5">
@@ -424,21 +424,21 @@
                         <i class="trustpilot">Notre expérience avec Maky s'est parfaitement déroulée. Échange facile
                             durant notre
                             séjour via une application. Voiture neuve et impeccable.</i>
-                        <p class="trustpilot1 mt-2"><a routerLink="testimonials">Tous les témoignages</a></p>
+                        <p class="trustpilot1 mt-2"><a @click="messageBtn">Tous les témoignages</a></p>
                     </div>
                     <div class="carousel-item divcolpag">
                         <p>Viard a écrit le commentaire suivant sur <span class="trustpilot1">Trustpilot</span> :</p>
                         <i class="trustpilot">Notre expérience avec Maky s'est parfaitement déroulée. Échange facile
                             durant notre
                             séjour via une application. Voiture neuve et impeccable.</i>
-                        <p class="trustpilot1 mt-2"><a routerLink="testimonials">Tous les témoignages</a></p>
+                        <p class="trustpilot1 mt-2"><a @click="messageBtn">Tous les témoignages</a></p>
                     </div>
                     <div class="carousel-item divcolpag">
                         <p>Viard a écrit le commentaire suivant sur <span class="trustpilot1">Trustpilot</span> :</p>
                         <i class="trustpilot">Notre expérience avec Maky s'est parfaitement déroulée. Échange facile
                             durant notre
                             séjour via une application. Voiture neuve et impeccable.</i>
-                        <p class="trustpilot1 mt-2"><a routerLink="testimonials">Tous les témoignages</a></p>
+                        <p class="trustpilot1 mt-2"><a @click="messageBtn">Tous les témoignages</a></p>
                     </div>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                         aria-controls="collapseExample">
                         <i
-                            class="bi {{ isIconChanged ? 'bi-dash-circle-fill' : 'bi-plus-circle-fill' }} iconpluschange"></i>
+                            class="bi bi-plus-circle-fill"></i>
                         Quelles sont les assurances incluse dans la location ?
                     </a>
                 </p>
@@ -464,7 +464,7 @@
                     <a data-bs-toggle="collapse" href="#collapseEx" role="button" aria-expanded="false"
                         aria-controls="collapseEx" >
                         <i
-                            class="bi {{ isIconChangedn ? 'bi-dash-circle-fill' : 'bi-plus-circle-fill' }} iconpluschange"></i>
+                            class="bi bi-plus-circle-fill"></i>
                         Dois-je verser un dépot de garantie ?
                     </a>
                 </p>
@@ -477,7 +477,7 @@
                     <a data-bs-toggle="collapse" href="#collapseExa" role="button" aria-expanded="false"
                         aria-controls="collapseExa" >
                         <i
-                            class="bi {{ isIconChangedne ? 'bi-dash-circle-fill' : 'bi-plus-circle-fill' }} iconpluschange"></i>
+                            class="bi bi-plus-circle-fill"></i>
                         Dois-je verser un dépot de garantie ?
                     </a>
                 </p>
@@ -499,8 +499,8 @@
         <div class="col">
             <div class="cardOn">
                 <div class="box">
-                    <img class="imagebox" src="" alt="Card image cap" draggable="false">
-                    <div class="overlay" routerLink="voitures" title="Renault twingo"><i class="bi bi-plus-circle"></i>
+                    <img class="imagebox" src="../assets/image/HomeImg/photos1.jpg" alt="Card image cap" draggable="false">
+                    <div class="overlay" @click="voitureBtn" title="Renault twingo"><i class="bi bi-plus-circle"></i>
                     </div>
                 </div>
                 <div class="card-body cardone">
@@ -515,8 +515,8 @@
         <div class="col">
             <div class="cardOn">
                 <div class="box">
-                    <img class="imagebox" src="" alt="Card image cap" draggable="false">
-                    <span class="overlay" routerLink="voitures"><i class="bi bi-plus-circle"></i></span>
+                    <img class="imagebox" src="../assets/image/HomeImg/photos2.webp" alt="Card image cap" draggable="false">
+                    <span class="overlay" @click="voitureBtn"><i class="bi bi-plus-circle"></i></span>
                 </div>
                 <div class="card-body cardone">
                     <div class="cardivision">
@@ -530,8 +530,8 @@
         <div class="col">
             <div class="cardOn">
                 <div class="box">
-                    <img class="imagebox" src="" alt="Card image cap" draggable="false">
-                    <span class="overlay" routerLink="voitures"><i class="bi bi-plus-circle"></i></span>
+                    <img class="imagebox" src="../assets/image/HomeImg/photos3.jpg" alt="Card image cap" draggable="false">
+                    <span class="overlay" @click="voitureBtn"><i class="bi bi-plus-circle"></i></span>
                 </div>
 
                 <div class="card-body cardone">
@@ -546,8 +546,8 @@
         <div class="col">
             <div class="cardOn">
                 <div class="box">
-                    <img class="imagebox" src="" alt="Card image cap" draggable="false">
-                    <span class="overlay" routerLink="voitures"><i class="bi bi-plus-circle"></i></span>
+                    <img class="imagebox" src="../assets/image/HomeImg/photos4.jpg" alt="Card image cap" draggable="false">
+                    <span class="overlay" @click="voitureBtn"><i class="bi bi-plus-circle"></i></span>
                 </div>
                 <div class="card-body cardone">
                     <div class="cardivision">
@@ -629,16 +629,27 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
 
+
+const router = useRouter();
+
+const messageBtn = () => {
+    router.push('/message');
+}
+
+const voitureBtn = () => {
+    router.push('/about');
+}
 </script>
 
 <style lang='scss' scoped>
 /* css 1 */
 .banner {
-    background-image: url('../../../assets/locationImg/maki.png');
+    background-image: url('../assets/image/HomeImg/maki.png');
+    // background-color: rgb(62, 62, 149);
     height: 600px;
     background-position: center top;
-    /* background-repeat: cover; */
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1037,11 +1048,12 @@ li {
     opacity: 0.5;
     filter: grayscale(100%);
 }
-
-.custom-hover {
+.peg:hover{
     opacity: 1;
     filter: none;
+
 }
+
 
 .peg img {
     width: 80%;
