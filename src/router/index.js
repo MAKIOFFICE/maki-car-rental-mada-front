@@ -2,11 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home/Home.vue'
 import About from '../views/Voiture/About.vue'
 import Faq from '../views/Faq/Faq.vue'
-import Cvg from '../views/Cvg.vue'
-import Contact from '../views/Contact.vue'
-import Message from '../views/details/Message.vue'
-import Reserve from '../views/details/Reserve.vue'
-import Franchise from '../views/details/Franchise.vue'
+import Cvg from '../views/Cvg/Cvg.vue'
+import Contact from '../views/Contact/Contact.vue'
+import Message from '../views/details/Message/Message.vue'
+import Reserve from '../views/details/Reserve/Reserve.vue'
+import Franchise from '../views/details/Franchise/Franchise.vue'
+
+import Animate from '../views/Contact/animate.vue'
 
 const routes = [
     {
@@ -48,6 +50,11 @@ const routes = [
         path: '/franchise',
         name: 'Franchise',
         component: Franchise
+    },
+    {
+        path: '/animate',
+        name: 'Animate',
+        component: Animate
     }
 ]
 

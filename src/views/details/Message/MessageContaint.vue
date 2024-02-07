@@ -1,46 +1,24 @@
 <template>
     <div>
-        <div class="head">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h5 class="h5">Témoignages et avis clients</h5>
-            </div>
-            <div class="col-md-6 divisquest">
-                <ul class="d-flex">
-                    <a>
-                        <li class="li">ACCUEIL</li>
-                    </a>
-                    <a>
-                        <li class="li" >LOCATION DE VOITURE À L'ÎLE MAURICE</li>
-                    </a>
-                    <li class="li1">TÉMOIGNAGES ET AVIS CLIENTS</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- fin head -->
-
-<div class="container">
+        <div class="container">
     <div class="row">
 
         <div class="col-md-8">
-            <div class="commentclass">
-                <p class="paramcomclass">name a écrit le commentaire suivant sur <span class="spanlinkname"
-                       >Trustpilot</span>:</p>
-                <div>
-                    <div class="d-flex divisflexname">
-                        <span class="spannameic"><i class="bi bi-quote"></i> </span>
-                        <h4 class="h4classname">title</h4>
-                    </div>
-                    <div class="divclassname">
-                        <p class="paramclassname">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, porro cumque? Quam, amet omnis culpa, corporis enim veniam sit recusandae iste, maiores blanditiis porro sed totam eos! Repellendus, amet ducimus.<span class="inverted-icon"><i
-                                    class="bi bi-quote"></i></span></p>
-
-                    </div>
+          <div class="commentclass">
+            <p class="paramcomclass">name a écrit le commentaire suivant sur <span class="spanlinkname"
+                  >Trustpilot</span>:</p>
+           <div>
+                <div class="d-flex divisflexname">
+                    <span class="spannameic"><i class="bi bi-quote"></i> </span>
+                    <h4 class="h4classname">title</h4>
+                </div>
+                <div class="divclassname">
+                    <p class="paramclassname">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, porro cumque? Quam, amet omnis culpa, corporis enim veniam sit recusandae iste, maiores blanditiis porro sed totam eos! Repellendus, amet ducimus.<span class="inverted-icon"><i
+                                class="bi bi-quote"></i></span>
+                    </p>
                 </div>
             </div>
+        </div>
         </div>
         <div class="col-md-4">
             <div class="diviscont">
@@ -145,13 +123,9 @@
                             <span class="spanserch"><i class="bi bi-check-lg"></i></span>
                         </div>
                     </div>
-
-
                 </form>
-
             </div>
         </div>
-        <!-- Contenu de la page avec les sections -->
     </div>
 </div>
     </div>
@@ -160,48 +134,55 @@
 <script setup></script>
 
 <style lang='scss' scoped>
-.head {
-  width: 100%;
-  background-color: #2d3e52;
-  color: #fff;
-}
-
-.head a {
-  color: #fff;
-}
-
-li {
-  list-style: none;
-}
-
-.h5,
-.li {
-  /* background-color: aqua; */
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.li {
-  font-size: 12px;
+.commentclass {
+  background-color: #fff;
+  padding: 20px;
   margin-top: 20px;
 }
-
-.h5 {
-  margin-top: 15px;
-  font-size: 1.3em;
+.paramcomclass {
+  color: #2d3e52;
+  font-size: 16px;
 }
-
-.custom-hover:hover {
+.spanlinkname {
   color: #6dace6;
+  cursor: pointer;
 }
-
-.li1 {
-  color: darkorange;
-  font-size: 12px;
-  margin-top: 25px;
+.spannameic {
+  /* background-color: red; */
+  display: inline-block;
+  margin-top: -15px;
+  padding-right: 10px;
 }
-
-/* fin head */
+.h4classname {
+  /* background-color: burlywood; */
+  font-size: 30px;
+  color: #6dace6;
+  font-style: italic;
+}
+.paramclassname {
+  /* background-color: chartreuse; */
+  padding: 0px 30px;
+  position: relative;
+  font-size: 20px;
+  color: #6dace6;
+  font-style: italic;
+  text-align: justify;
+}
+.inverted-icon {
+  /* background-color: #768c15; */
+  transform: rotateX(150deg);
+  transform: rotateY(150deg);
+  display: inline-block;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 0;
+}
+.bi-quote {
+  font-size: 1.4rem;
+  color: #fdb714;
+  display: inline-block;
+  /* background-color: #6dace6; */
+}
 .diviscont {
   background-color: #fff;
   padding: 20px;
@@ -279,14 +260,10 @@ ul {
 .cursIcn {
   cursor: pointer;
 }
-
-
-
 .divisionsear {
   position: relative;
   background-color: #6dace6;
 }
-
 .spanserch {
   font-size: 1.5rem;
   position: absolute;
@@ -301,79 +278,16 @@ ul {
   justify-content: center;
   cursor: pointer;
 }
-
 .submitclass {
   background-color: #899e27;
   color: #fff;
 }
-
 .form-label {
   font-size: 16px;
 }
-
-/* commentaires */
-.commentclass {
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.h4classname {
-  /* background-color: burlywood; */
-  font-size: 30px;
-  color: #6dace6;
-  font-style: italic;
-}
-
-.paramclassname {
-  /* background-color: chartreuse; */
-  padding: 0px 30px;
-  position: relative;
-  font-size: 20px;
-  color: #6dace6;
-  font-style: italic;
-  text-align: justify;
-}
-
-.inverted-icon {
-  /* background-color: #768c15; */
-  transform: rotateX(150deg);
-  transform: rotateY(150deg);
-  display: inline-block;
-  padding-right: 10px;
-  position: absolute;
-  bottom: 0;
-}
-
-.spannameic {
-  /* background-color: red; */
-  display: inline-block;
-  margin-top: -15px;
-  padding-right: 10px;
-}
-
-.bi-quote {
-  font-size: 1.4rem;
-  color: #fdb714;
-  display: inline-block;
-  /* background-color: #6dace6; */
-}
-
-.spanlinkname {
-  color: #6dace6;
-  cursor: pointer;
-}
-
-.paramcomclass {
-  color: #2d3e52;
-  font-size: 16px;
-}
-
-/*  */
 .divisionseardate {
   position: relative;
 }
-
 .spandate {
   font-size: 1rem;
   position: absolute;
@@ -388,13 +302,10 @@ ul {
   justify-content: center;
   color: #fff;
 }
-
-
 .formcont::-webkit-calendar-picker-indicator {
   position: relative;
   z-index: 20;
   cursor: pointer;
   opacity: 0;
 }
-
 </style>

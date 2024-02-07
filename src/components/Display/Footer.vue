@@ -17,7 +17,7 @@
 
             <!-- Colonne 3 -->
             <div class="col-md-4 d-flex justify-content-end">
-                <a>
+                <a @click="scrollToTop">
                 <i class="bi bi-arrow-up-circle iconeTop"></i>
                 </a>
             </div>
@@ -28,7 +28,12 @@
 </template>
 
 <script setup>
-
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 </script>
 
 <style lang='scss' scoped>

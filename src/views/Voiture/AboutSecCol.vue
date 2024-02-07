@@ -55,13 +55,13 @@
 
         </div>
         <div class="container containToas">
-          <div  role="alert" aria-live="assertive" aria-atomic="true">
+          <div role="alert" aria-live="assertive" aria-atomic="true" v-show="isVisible">
             <div class="toast-body d-flex">
               <span class="spanToasts"><i class="bi bi-exclamation-circle"></i></span>
               <p class="paraToas">L'offre qui s'affiche est un exemple de réservation sur les prochains 5 jours. Pour
                 avoir une offre adaptée, veuillez remplir le formulaire adjacent, et cliquez sur le bouton 'Afficher les
                 offres'</p>
-              <span class="icnX"><i class="bi bi-x"></i></span>
+              <span class="icnX"><i class="bi bi-x" @click="handleClick"></i></span>
             </div>
           </div>
         </div>
@@ -247,11 +247,19 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+  
+const isVisible = ref(true);
+  
+const handleClick = () => {
+  isVisible.value = false;
+};
 const router = useRouter();
 
 const reserveBtn = () => {
     router.push('/reserve');
-}</script>
+}
+</script>
 
 <style lang='scss' scoped>
 .spaniconcam {

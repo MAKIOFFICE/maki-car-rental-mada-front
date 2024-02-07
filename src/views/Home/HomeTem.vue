@@ -45,9 +45,8 @@
             <div class="coll">
                 <p>
                     <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                        aria-controls="collapseExample">
-                        <i
-                            class="bi bi-plus-circle-fill"></i>
+                        aria-controls="collapseExample" @click="toggleIconNext(1)">
+                        <i :class="{ 'bi-dash-circle-fill': isIconChangedn1, 'bi-plus-circle-fill': !isIconChangedn1 }"></i>
                         Quelles sont les assurances incluse dans la location ?
                     </a>
                 </p>
@@ -58,9 +57,8 @@
                 </div>
                 <p>
                     <a data-bs-toggle="collapse" href="#collapseEx" role="button" aria-expanded="false"
-                        aria-controls="collapseEx" >
-                        <i
-                            class="bi bi-plus-circle-fill"></i>
+                        aria-controls="collapseEx" @click="toggleIconNext(2)">
+                        <i :class="{ 'bi-dash-circle-fill': isIconChangedn2, 'bi-plus-circle-fill': !isIconChangedn2 }"></i>
                         Dois-je verser un dépot de garantie ?
                     </a>
                 </p>
@@ -71,9 +69,8 @@
                 </div>
                 <p>
                     <a data-bs-toggle="collapse" href="#collapseExa" role="button" aria-expanded="false"
-                        aria-controls="collapseExa" >
-                        <i
-                            class="bi bi-plus-circle-fill"></i>
+                        aria-controls="collapseExa" @click="toggleIconNext(3)">
+                        <i :class="{ 'bi-dash-circle-fill': isIconChangedn3, 'bi-plus-circle-fill': !isIconChangedn3 }"></i>
                         Dois-je verser un dépot de garantie ?
                     </a>
                 </p>
@@ -91,7 +88,21 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-
+import { ref } from 'vue';
+  
+  const isIconChangedn1 = ref(false);
+  const isIconChangedn2 = ref(false);
+  const isIconChangedn3 = ref(false);
+  
+  const toggleIconNext = (buttonNumber) => {
+    if (buttonNumber === 1) {
+      isIconChangedn1.value = !isIconChangedn1.value;
+    } else if (buttonNumber === 2) {
+      isIconChangedn2.value = !isIconChangedn2.value;
+    } else if (buttonNumber === 3) {
+      isIconChangedn3.value = !isIconChangedn3.value;
+    }
+  };
 const router = useRouter();
 
 const messageBtn = () => {

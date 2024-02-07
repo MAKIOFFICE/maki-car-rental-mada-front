@@ -90,12 +90,12 @@
                 </a>
                 <div class="collapse mb-3" id="collapseExa2">
                   <div class="card card-body colFont">
-                    <ul class="d-flex ulT1" >
+                    <ul class="d-flex ulT1" @click="changeStyleColor(1)" :style="{ backgroundColor: button1Color, color: button1TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12">7 PLACES</li>
                       <li class="lisTner1">(1)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(2)" :style="{ backgroundColor: button2Color, color: button2TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12">4 ROUES MOTRICES</li>
                       <li class="lisTner1">(1)</li>
@@ -113,12 +113,12 @@
                 </a>
                 <div class="collapse mb-3" id="collapseExa3">
                   <div class="card card-body colFont">
-                    <ul class="d-flex ulT1" >
+                    <ul class="d-flex ulT1" @click="changeStyleColor(3)" :style="{ backgroundColor: button3Color, color: button3TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12">AUTOMATIQUE</li>
                       <li class="lisTner1">(3)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(4)" :style="{ backgroundColor: button4Color, color: button4TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12">MANUELLE</li>
                       <li class="lisTner1">(7)</li>
@@ -136,12 +136,12 @@
                 </a>
                 <div class="collapse mb-3" id="collapseExa4">
                   <div class="card card-body colFont">
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(5)" :style="{ backgroundColor: button5Color, color: button5TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12">CLIMATISATION</li>
                       <li class="lisTner1">(7)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(6)" :style="{ backgroundColor: button6Color, color: button6TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12 d-flex">
                         <div>GPS</div>
@@ -154,7 +154,7 @@
                       </li>
                       <li class="lisTner1">(7)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(7)" :style="{ backgroundColor: button7Color, color: button7TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12 d-flex">
                         <div>SIEGE BEBE</div>
@@ -167,7 +167,7 @@
                       </li>
                       <li class="lisTner1">(7)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(8)" :style="{ backgroundColor: button8Color, color: button8TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12 d-flex">
                         <div>REHAUSSEUR</div>
@@ -180,7 +180,7 @@
                       </li>
                       <li class="lisTner1">(7)</li>
                     </ul>
-                    <ul class="d-flex ulT1">
+                    <ul class="d-flex ulT1" @click="changeStyleColor(9)" :style="{ backgroundColor: button9Color, color: button9TextColor }">
                       <li class="lisTner1"><i class="bi bi-check-square-fill"></i></li>
                       <li class="lisTner12 d-flex">
                         <div>CONDUCTEUR</div>
@@ -256,7 +256,53 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+  
+const colors = ['#f5f5f5', '#4995dd'];
+const textColors = ["black", "white"];
+  
+const button1Color = ref(colors[0]);
+const button1TextColor = ref(textColors[0]);
+  
+const button2Color = ref(colors[0]);
+const button2TextColor = ref(textColors[0]);
+
+const button3Color = ref(colors[0]);
+const button3TextColor = ref(textColors[0]);
+
+const button4Color = ref(colors[0]);
+const button4TextColor = ref(textColors[0]);
+
+const button5Color = ref(colors[0]);
+const button5TextColor = ref(textColors[0]);
+
+const button6Color = ref(colors[0]);
+const button6TextColor = ref(textColors[0]);
+
+const button7Color = ref(colors[0]);
+const button7TextColor = ref(textColors[0]);
+
+const button8Color = ref(colors[0]);
+const button8TextColor = ref(textColors[0]);
+
+const button9Color = ref(colors[0]);
+const button9TextColor = ref(textColors[0]);
+  
+const changeStyleColor = (buttonNumber) => {
+const currentColor = eval(`button${buttonNumber}Color`);
+const currentTextColor = eval(`button${buttonNumber}TextColor`);
+  
+const colorIndex = colors.indexOf(currentColor.value);
+const nextColorIndex = (colorIndex + 1) % colors.length;
+currentColor.value = colors[nextColorIndex];
+  
+const textColorIndex = textColors.indexOf(currentTextColor.value);
+const nextTextColorIndex = (textColorIndex + 1) % textColors.length;
+currentTextColor.value = textColors[nextTextColorIndex];
+  };
+
+</script>
 <style lang='scss' scoped>
 .pTwo {
     width: 20%;

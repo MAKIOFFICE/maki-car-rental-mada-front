@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="boutton">
-                            <button routerLink="voitures">AFFICHER LES OFFRES</button>
+                            <button>AFFICHER LES OFFRES</button>
                         </div>
                     </form>
                 </div>
@@ -143,8 +143,7 @@
     </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang='scss' scoped>
 .banner {
