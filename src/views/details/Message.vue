@@ -77,7 +77,7 @@
                             class="spnicnassur2 cursIcn"> Aucun frais d'annulation jusqu'à 48 heures
                             avant la date de
                             livraison</span></li>
-                    <li class="lispanassur"><span><i class="bi bi-piggy-bank-fill"></i></span><span
+                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-piggy-bank-fill"></i></span><span
                             class="spnicnassur2 cursIcn">Prix tout compris, aucun frais caché</span>
                     </li>
                     <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-check-lg"></i></span><span
