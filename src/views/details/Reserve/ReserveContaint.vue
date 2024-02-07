@@ -1,34 +1,11 @@
 <template>
-  <div>
-    <div class="head">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h5 class="h5">
-              Complétez le formulaire suivant pour réserver votre voiture
-            </h5>
-          </div>
-          <div class="col-md-6 divisquest">
-            <ul class="d-flex">
-              <a>
-                <li class="li">ACCUEIL</li>
-              </a>
-              <a>
-                <li class="li">LOCATION DE VOITURES AU SEYCHELLES</li>
-              </a>
-              <li class="li1">CONTACTEZ-NOUS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- fin head -->
+    <div>
 
-    <div class="container">
+        <div class="container">
       <div class="row">
         <!-- Première colonne -->
         <div class="col-md-8 grandDivforminp">
-          <div class="container containToas">
+          <div class="container containToas"  v-show="isVisible">
             <div role="alert" aria-live="assertive" aria-atomic="true">
               <div class="toast-body d-flex">
                 <span class="spanToasts"><i class="bi bi-exclamation-circle"></i></span>
@@ -43,7 +20,7 @@
                   vous êtes intéressé par un transfert, veuillez le mentionner dans le
                   champ «Souhaits particuliers».
                 </p>
-                <span class="icnX"><i class="bi bi-x"></i></span>
+                <span class="icnX"><i class="bi bi-x" @click="handleClick"></i></span>
               </div>
             </div>
           </div>
@@ -391,11 +368,7 @@
                       </select>
                     </li>
                     <li>
-                      <span class="spanlioption">{{
-                        showBadge3
-                          ? "REGLER 100% MAINTENANT"
-                          : "REGLER SEULEMENT 24.4 $ MAINTENANT"
-                      }}</span>
+                      <span class="spanlioption">REGLER 100% MAINTENANT</span>
                     </li>
                   </ul>
                 </div>
@@ -492,7 +465,7 @@
           <div class="headers">
             <h2 class="Votres">Votre réservation</h2>
             <div class="clearfixe text-center">
-              <img src="../../assets/image/HomeImg/photos4.jpg" width="203" height="98" />
+              <img src="../../../assets/image/HomeImg/photos4.jpg" width="203" height="98" />
               <h5 class="h5name">name</h5>
               <small>AUTOMATIQUE</small>
             </div>
@@ -591,28 +564,21 @@
         </div>
       </div>
     </div>
-    <div class="container mt-3">
-      <div class="row justify-content-around">
-        <div class="col-md-6">
-          <button type="button" class="btnvalidation">⇦ Retour</button>
-        </div>
-        <div class="col-md-6">
-          <button type="button" class="btnvalidation">Valider ⇨</button>
-          <p class="parambtnval">
-            Vous pourrez vérifier à nouveau vos informations à l'étape suivante, avant de
-            finaliser votre réservation.
-          </p>
-        </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script setup>
 import { useRouter } from "vue-router";
-import check from '../../assets/icons/check.svg';
-import checkround from '../../assets/icons/checkround.svg';
-import warning from '../../assets/icons/warning.svg'
+import check from '../../../assets/icons/check.svg';
+import checkround from '../../../assets/icons/checkround.svg';
+import warning from '../../../assets/icons/warning.svg'
+import { ref } from 'vue';
+  
+const isVisible = ref(true);
+  
+const handleClick = () => {
+  isVisible.value = false;
+};
 const router = useRouter();
 
 const dataAssurance = [
@@ -660,55 +626,9 @@ const dataAssurance = [
 const franchiseBtn = () => {
   router.push("/franchise");
 };
-
-const handleChoose = () => {
-
-};
 </script>
 
 <style lang="scss" scoped>
-.head {
-  width: 100%;
-  background-color: #2d3e52;
-  color: #fff;
-}
-
-.head a {
-  color: #fff;
-}
-
-li {
-  list-style: none;
-}
-
-.h5,
-.li {
-  /* background-color: aqua; */
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.li {
-  font-size: 12px;
-  margin-top: 20px;
-}
-
-.h5 {
-  margin-top: 15px;
-  font-size: 1.3em;
-}
-
-.custom-hover:hover {
-  color: #6dace6;
-}
-
-.li1 {
-  color: darkorange;
-  font-size: 12px;
-  margin-top: 25px;
-}
-
-/* fin head */
 .Votres {
   /* background-color: aqua; */
   font-size: 18px;
@@ -1046,25 +966,7 @@ label {
   color: #6dace6;
 }
 
-.btnvalidation {
-  background-color: #899e27;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-}
 
-.btnvalidation:hover {
-  background-color: #546507;
-}
-
-.parambtnval {
-  width: 400px;
-  padding: 10px;
-  margin-top: 10px;
-}
 
 .paypalcount {
   cursor: pointer;
