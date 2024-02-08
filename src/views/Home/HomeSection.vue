@@ -5,50 +5,7 @@
         <div class="col-md-8 onedivision">
             <!-- Votre contenu existant -->
             <div class="container mt-4">
-                <div class="row gpsoffert">
-                    <div class="col-md-6 imagegps">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active btnrondstyle" aria-label="Slide 1"></button>
-                                <button class="btnrondstyle" type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button class="btnrondstyle" type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button class="btnrondstyle" type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button class="btnrondstyle" type="button" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://d12ittivwictyd.cloudfront.net/images/gps/9fr1.jpg"
-                                        class="img-fluid" alt="GPS Image" draggable="false">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr2.jpg"
-                                        draggable="false">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr3.jpg"
-                                        draggable="false">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr4.jpg"
-                                        draggable="false">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr5.jpg"
-                                        draggable="false">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 parOffert">
-                        <h1 class="mb-4">GPS offert pour toute location de voiture</h1>
-                        <p>Aux Seychelles, toutes les locations de voitures réalisées sur notre site incluent un GPS gratuit. Certains locaux et habitués vous diront qu'il n'est pas nécessaire d'avoir un GPS aux Seychelles. Cela peut être vrai. Cependant, si c'est la première fois que vous vous rendez sur cette île, un GPS pourra s'avérer très utile, en particulier le premier jour lorsque vous pourriez avoir besoin de rejoindre votre hôtel depuis l'aéroport.</p>
-                    </div>
-                </div>
+               
             </div>
 
             <!--  -->
@@ -86,28 +43,7 @@
 
         </div>
         <div class="col-md-4 twodivision">
-            <div class="avantages">
-                <h1>Encore plus d'avantages :</h1>
-                <div class="divAv">
-                    <div>
-                        <ul>
-                            <li><span><i class="bi bi-stopwatch"></i></span></li>
-                            <li><span><i class="bi bi-piggy-bank-fill"></i></span></li>
-                            <li><span><i class="bi bi-hand-thumbs-up-fill"></i></span></li>
-                            <li class="lipic"><span><i class="bi bi-check-lg"></i></span></li>
-                            <li><span><i class="bi bi-link"></i></span></li>
-                        </ul>
-
-                    </div>
-                    <div>
-                        <p class="pic1">Aucun frais d'annulation jusqu'à 48 heures avant la date de livraison</p>
-                        <p class="pic1">Prix tout compris, aucun frais caché</p>
-                        <p class="pic1 one1pi">Vous pouvez réserver un modèle précis, pas juste une catégorie</p>
-                        <p class="pic">Uniquement des voitures récentes et de très bonne qualité</p>
-                        <p class="pic2">Pas de frais supplémentaire pour les voitures automatiques</p>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="contactez">
                 <h1>Contactez-nous</h1>

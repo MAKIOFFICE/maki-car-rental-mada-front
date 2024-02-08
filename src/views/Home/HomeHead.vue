@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="banner">
-      <!--debut division 1  -->
+    <HomeBanner/>
+    <!-- <div class="banner">
       <div class="header-text">
         <p>
           <span class=""> Bienvenue chez Maki Car Rental Madagascar !</span>
@@ -11,20 +11,10 @@
             tout compris et découvrez des voitures récentes et de très bonne
             qualité.
           </span>
-          <!-- <span
-            ref="dynamicText"
-            class="animated"
-            :class="{
-              'typewriter-in': isAppearing,
-              'typewriter-out': isDisappearing,
-            }"
-          >
-            {{ currentText }}
-          </span> -->
         </p>
       </div>
       <SearchForm />
-    </div>
+    </div> -->
     <!--fin division 1  -->
     <div
       class="modal fade"
@@ -127,7 +117,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import SearchForm from "./SearchForm.vue";
+import HomeBanner from "./HomeBanner.vue";
 const dynamicText = ref(null);
 const currentText = ref("");
 const isAppearing = ref(true);
@@ -174,20 +164,19 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.banner {
-  background-image: url("../../assets/image/HomeImg/banner-bg.png");
-  // background-color: rgb(62, 62, 149);
-  height: 700px;
-  background-position: center top;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 44px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-}
+// .banner {
+//   background-image: url("../../assets/image/HomeImg/banner-bg.png");
+//   height: 700px;
+//   background-position: center top;
+//   width: 100%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   padding: 44px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: end;
+// }
 
 .header-text {
   height: 282px;

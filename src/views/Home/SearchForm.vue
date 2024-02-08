@@ -107,6 +107,7 @@ const onSubmit = () => {
     display: flex;
     gap: 12px;
     width: 100%;
+    flex-wrap: wrap;
     .form-child {
       flex-grow: 1;
     }

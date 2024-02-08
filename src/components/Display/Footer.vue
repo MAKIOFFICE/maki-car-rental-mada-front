@@ -11,7 +11,7 @@
 
             <!-- Colonne 2 -->
             <div class="col-md-4 d-flex justify-content-end">
-                <p>© 2009 – 2024 Maki Car Rental</p>
+                <p>© 2009 – {{ currentYear  }} Maki Car Rental</p>
 
             </div>
 
@@ -28,6 +28,17 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+
+const currentYear = ref(new Date().getFullYear());
+
+onMounted(() => {
+  // Mettre à jour l'année toutes les secondes
+  setInterval(() => {
+    currentYear.value = new Date().getFullYear();
+  }, 1000);
+});
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,

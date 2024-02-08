@@ -21,7 +21,7 @@ const value = ref(undefined);
       show-time
       type="date"
       :placeholder="placeholder"
-      style="width: 100%;"
+      style="width: 100%; height: 44px"
     />
   </div>
 </template>
