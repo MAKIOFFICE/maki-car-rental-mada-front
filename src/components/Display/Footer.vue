@@ -1,5 +1,9 @@
 <template>
   <div class="footer">
+    <div
+      class="elfsight-app-3f56ca84-0676-4116-b0f2-c122e5a57342"
+      data-elfsight-app-lazy
+    ></div>
     <div class="container divcont">
       <div class="row rowones">
         <!-- Colonne principale (contenu principal) -->
@@ -88,7 +92,7 @@
           </div>
           <div>
             <a @click="scrollToTop" class="icncent">
-              <i class="bi bi-arrow-up-circle iconeTop"></i>
+              <i class="bi bi-arrow-up-circle"></i>
             </a>
           </div>
         </div>
