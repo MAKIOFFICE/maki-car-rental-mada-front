@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container mt-5 mb-5 tarif">
+        <div class="container divcont mt-5 mb-5 tarif">
             <h1>Tarif à la semaine</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" >
                 <div class="col" v-for="(item, index) in dataAuto" :key="index">
@@ -66,9 +66,13 @@ const voitureBtn = () => {
 </script>
 
 <style lang='scss' scoped>
+.divcont{
+  // background-color: #74881c;
+  padding: 0px 50px;
+}
 .imagebox {
     width: 100%;
-    height: 200px;
+    height: 180px;
 }
 
 .box:hover .imagebox {

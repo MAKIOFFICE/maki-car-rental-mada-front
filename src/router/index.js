@@ -8,7 +8,7 @@ import Message from '../views/details/Message/Message.vue'
 import Reserve from '../views/details/Reserve/Reserve.vue'
 import Franchise from '../views/details/Franchise/Franchise.vue'
 
-import Animate from '../views/Contact/animate.vue'
+import Animate from '../components/Display/foot.vue'
 
 const routes = [
     {

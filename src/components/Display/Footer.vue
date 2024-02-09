@@ -1,53 +1,194 @@
 <template>
-    <div>
-        <div class="elfsight-app-3f56ca84-0676-4116-b0f2-c122e5a57342" data-elfsight-app-lazy></div>
-        <footer class="container-fluid text-light p-4">
-        <div class="container">
-            <div class="row">
-            <!-- Colonne 1 -->
-            <div class="col-md-4">
-                <img routerLink="" src="https://d12ittivwictyd.cloudfront.net/images/logo.png" alt="Maki Car Rental Logo">
-            </div>
-
-            <!-- Colonne 2 -->
-            <div class="col-md-4 d-flex justify-content-end">
-                <p>© 2009 – 2024 Maki Car Rental</p>
-
-            </div>
-
-            <!-- Colonne 3 -->
-            <div class="col-md-4 d-flex justify-content-end">
-                <a @click="scrollToTop">
-                <i class="bi bi-arrow-up-circle iconeTop"></i>
-                </a>
-            </div>
-            </div>
+  <div class="footer">
+    <div
+      class="elfsight-app-3f56ca84-0676-4116-b0f2-c122e5a57342"
+      data-elfsight-app-lazy
+    ></div>
+    <div class="container divcont">
+      <div class="row rowones">
+        <!-- Colonne principale (contenu principal) -->
+        <h2 class="titlebur">Notre bureau est situé à</h2>
+        <div class="col-md-6">
+          <ul class="ulident">
+            <li>Maki Car Rental Madagascar</li>
+            <li>Royal Road 363</li>
+            <li>Pointe aux Canonniers</li>
+            <li>(near Grand Baie)</li>
+            <li>GPS: S20°0'30.24" E57°33'34.9194"</li>
+          </ul>
         </div>
-        </footer>
+
+        <!-- Colonne latérale (contenu secondaire) -->
+        <div class="col-md-6">
+          <ul class="ulident ultwo">
+            <li>Téléphone local: +230 5250 1260</li>
+            <li>
+              (Ceci n'est pas un numéro d'urgence. Merci de l'utiliser seulement
+              si vous nous appelez depuis l'île Maurice ! Le numéro de téléphone
+              d'urgence vous sera envoyé avec votre confirmation de
+              réservation.)
+            </li>
+            <li>
+              Merci de nous appeler avant de venir nous voir, afin d'être sûrs
+              que quelqu'un sera là pour vous recevoir.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+    <!--  -->
+    <div class="container divcont mt-5">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            <img
+              routerLink=""
+              src="https://d12ittivwictyd.cloudfront.net/images/logo.png"
+              alt="Maki Car Rental Logo"
+            />
+          </h5>
+          <div class="divyears">
+            <p>© Maki Car Rental Madagascar {{ currentYear }}</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>MENU</h5>
+          <ul class="ulident">
+            <li><a href="#">LOCATION DE VOITURES A MADAGASCAR</a></li>
+            <li><a href="#">VOITURES ET TARIFS</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">CGV ET MENTIONS LEGALES</a></li>
+            <li><a href="#">CONTACTEZ-NOUS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>PAYEMENT</h5>
+          <div class="divyears">
+            <p>lorem 2024</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Contactez-nous</h5>
+          <p>Retrouvez nos offres et bénéficiez de conseils d'experts</p>
+          <ul class="ulident">
+            <li class="d-flex iconCont">
+              <span><i class="bi bi-telephone"></i></span
+              ><a href="#">+49-931-663984-98</a>
+            </li>
+            <li class="d-flex iconCont">
+              <span><i class="bi bi-envelope-fill"></i></span
+              ><a href="#">+248-2603261</a>
+            </li>
+          </ul>
+          <div class="iconfooter">
+            <span><i class="bi bi-linkedin"></i></span>
+            <span><i class="bi bi-facebook"></i></span>
+            <span><i class="bi bi-instagram"></i></span>
+            <span><i class="bi bi-twitter"></i></span>
+          </div>
+          <div>
+            <a @click="scrollToTop" class="icncent">
+              <i class="bi bi-arrow-up-circle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+
+const currentYear = ref(new Date().getFullYear());
+
+onMounted(() => {
+  // Mettre à jour l'année toutes les secondes
+  setInterval(() => {
+    currentYear.value = new Date().getFullYear();
+  }, 1000);
+});
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
+.footer {
+  background-color: #333;
+  padding: 20px 0px;
+}
+.divcont {
+  padding: 10px 50px;
+}
+.titlebur {
+  // background-color: deeppink;
+  padding: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+.ulident {
+  // background-color: brown;
+  padding: 0px;
+  color: #fff;
+}
+.ulident li {
+  // background-color: aquamarine;
+  margin-bottom: 5px;
+  padding: 10px 0px;
+}
+li {
+  color: #f5f5f5;
+}
+.divyears {
+  // background-color: chartreuse;
+  padding: 20px 0px;
+}
+.iconfooter {
+  // background-color: aqua;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+.iconfooter span {
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  padding: 8px 13px;
+  border-radius: 50%;
+  color: #fff;
+}
+a {
+  color: #f5f5f5;
+}
+h5 {
+  color: #fff;
+}
 p {
-    /* background-color: aquamarine; */
-    padding: 15px;
-    color: rgba(0, 0, 0, 0.649);
+  color: #fff;
 }
-
-.iconeTop {
-    font-size: 2.5rem;
-    color: #68b5de;
-    cursor: pointer;
+.iconCont span {
+  font-size: 1.2rem;
+  // background: red;
+  padding: 0px 10px;
 }
-img{
-    cursor: pointer;
-}</style>
+.rowones {
+  padding: 20px 30px;
+  border: 2px solid grey;
+}
+.icncent {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 10px;
+  display: flex;
+  color: #6dace6;
+  justify-content: right;
+  cursor: pointer;
+}
+</style>

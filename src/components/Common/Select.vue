@@ -52,7 +52,7 @@ const value = ref(undefined);
       show-search
       allow-clear
       :placeholder="placeholder"
-      style="width: 100%; height: 44px;"
+      style="width: 100%"
       :options="options"
       :filter-option="filterOption"
       @blur="handleBlur"
@@ -66,8 +66,10 @@ const value = ref(undefined);
 .label {
   font-weight: 600;
   color: black;
+  background-color: green;
 }
-.ant-select-selector {
-    height: 44px;
+.ant-select-show-search .ant-select-customize-input .ant-select-selector{
+  background-color: red;
 }
+
 </style>

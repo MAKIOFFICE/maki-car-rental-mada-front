@@ -2,11 +2,13 @@
   <div>
     <HomeHead />
     <HomeIcon />
+    <Homegps/>
+    <HomeAvantage/>
+    <HomeTarif/>
     <HomeSection />
     <HomeMarque/>
     <HomeLiv/>
     <HomeTem/>
-    <HomeTarif/>
   </div>
 </template>
 
@@ -18,6 +20,8 @@ import HomeMarque from './HomeMarque.vue'
 import HomeLiv from './HomeLiv.vue'
 import HomeTem from './HomeTem.vue'
 import HomeTarif from './HomeTarif.vue'
+import HomeAvantage from './HomeAvantage.vue';
+import Homegps from './Homegps.vue';
 </script>
 
 <style lang='scss' scoped></style>
