@@ -180,11 +180,15 @@ button {
 }
 .formcont {
   border-radius: 8px;
+  height: 50px;
 }
 .formcont::-webkit-calendar-picker-indicator {
   position: relative;
   z-index: 20;
   cursor: pointer;
   opacity: 0;
+}
+label{
+  font-weight: 500;
 }
 </style>

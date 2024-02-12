@@ -5,9 +5,10 @@
     <Homegps/>
     <HomeAvantage/>
     <HomeTarif/>
+    <HomeLiv/>
     <HomeSection />
     <HomeMarque/>
-    <HomeLiv/>
+    <HommeTemoignage/>
     <HomeTem/>
   </div>
 </template>
@@ -22,6 +23,7 @@ import HomeTem from './HomeTem.vue'
 import HomeTarif from './HomeTarif.vue'
 import HomeAvantage from './HomeAvantage.vue';
 import Homegps from './Homegps.vue';
+import HommeTemoignage from './HommeTemoignage.vue';
 </script>
 
 <style lang='scss' scoped></style>

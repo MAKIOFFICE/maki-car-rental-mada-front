@@ -142,6 +142,8 @@
 
 .parOffert{
   padding: 0px 20px;
+  // background-color: #fdb714;
+  padding-left: 60px;
 }
 .parOffert h1 {
   // background-color: red;
