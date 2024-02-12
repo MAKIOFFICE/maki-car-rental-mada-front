@@ -53,7 +53,7 @@
               Nos coupons sont aussi disponibles sur l'application Wallet
               d'Apple ou sur l'application WalletPasses d'Android.
             </h2>
-            <div>
+            <div class="imgapp">
               <img
                 alt="Wallet"
                 src="https://d12ittivwictyd.cloudfront.net/images/passbook_hand.png"
@@ -79,7 +79,10 @@
         <div class="col-md-3">
           <h5>PAYEMENT</h5>
           <div class="divyears">
-            <p>lorem 2024</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
           </div>
         </div>
 
@@ -209,6 +212,8 @@ p {
     font-size: 16px;
     font-weight: 400;
     margin-top: 20px;
-
+}
+.imgapp{
+  margin-top: 15px;
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="container">
         <div class="header text-center">
-          <h1>Bienvenue chez Maki Car Rental Madagascar !</h1>
+          <h1>{{ $t("welcome") }}</h1>
           <p>
             Choisissez le modèle précis que vous souhaitez, profitez d'un prix
             tout compris et découvrez des voitures récentes et de très bonne
@@ -167,8 +167,8 @@ button {
   position: absolute;
   z-index: 5;
   top: 0;
-  left: 85%;
-  width: 15%;
+  left: 80%;
+  width: 20%;
   height: 100%;
   background-color: #fff;
   border: 1px solid #b4b0b0;
@@ -188,7 +188,7 @@ button {
   cursor: pointer;
   opacity: 0;
 }
-label{
+label {
   font-weight: 500;
 }
 </style>

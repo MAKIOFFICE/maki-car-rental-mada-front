@@ -5,14 +5,14 @@
     </div>
     <!--  -->
     <div
-      id="carouselExampleIndicators"
+      id="carouselExampleIndicators1"
       class="carousel slide"
       data-bs-ride="carousel"
     >
       <div class="carousel-indicators">
         <button
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators1"
           data-bs-slide-to="0"
           class="active btnact"
           aria-current="true"
@@ -20,14 +20,14 @@
         ></button>
         <button
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators1"
           data-bs-slide-to="1"
           aria-label="Slide 2"
           class="btnact"
         ></button>
         <button
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleIndicators1"
           data-bs-slide-to="2"
           aria-label="Slide 3"
           class="btnact"
@@ -278,7 +278,7 @@
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleIndicators"
+        data-bs-target="#carouselExampleIndicators1"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -287,7 +287,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleIndicators"
+        data-bs-target="#carouselExampleIndicators1"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>

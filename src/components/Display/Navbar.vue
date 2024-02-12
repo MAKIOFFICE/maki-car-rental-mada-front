@@ -13,31 +13,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " @click="locationbtn">LOCATION DE VOITURES A MADAGASCAR</a>
+              <a class="nav-link " @click="locationbtn">{{ $t("location") }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="handleBtn">VOITURES ET TARIFS</a>
+              <a class="nav-link" @click="handleBtn">{{ $t("voiture") }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" @click="faqBtn">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="cvgBtn">CGV ET MENTIONS LEGALES</a>
+              <a class="nav-link" @click="cvgBtn">{{ $t("cvg") }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="contactBtn">CONTACTEZ-NOUS</a>
+              <a class="nav-link" @click="contactBtn">{{ $t("contact") }}</a>
             </li>
           </ul>
         </div>
-        <Dropdown>
+        <!-- <Dropdown>
           <div class="lang-dropdown">
             <img :src="lang" alt="langue" />
             <p>EN</p>
           </div>
-        </Dropdown>
-        <!-- <div class="divispaa">
-          <p class="spanRes"><span>Booking</span></p>
-        </div> -->
+        </Dropdown> -->
+        
+        <langage />
       </div>
     </nav>
   </div>
@@ -47,7 +46,7 @@
 import { useRouter } from 'vue-router';
 import Dropdown from '../Common/Dropdown.vue';
 import lang from '../../assets/icons/lang.svg';
-
+import langage from './langage.vue'
 const router = useRouter();
 
 const locationbtn = () => {
