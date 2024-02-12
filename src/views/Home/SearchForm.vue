@@ -101,7 +101,7 @@ const onSubmit = () => {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   gap: 12px;
   .form {
     display: flex;
