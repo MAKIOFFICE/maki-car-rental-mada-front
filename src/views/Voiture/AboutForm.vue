@@ -1,10 +1,12 @@
 <template>
   <div class="head">
     <div class="container divcont">
-        <h1>Votre demande</h1>
-      <div class="row justify-content-around">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 custom-column">
-          <div class="mb-3">
+      <h1>Votre demande</h1>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4"
+      >
+        <div class="custom-column">
+          <div>
             <label for="exampleInputEmail1" class="form-label"
               >Lieu de depart</label
             >
@@ -22,8 +24,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 custom-column">
-          <div class="mb-3">
+        <div class="custom-column">
+          <div>
             <label for="exampleInputEmail1" class="form-label"
               >Lieu de retour</label
             >
@@ -41,8 +43,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 custom-column">
-          <div class="mb-3">
+        <div class="custom-column">
+          <div>
             <label for="exampleInputEmail1" class="form-label"
               >Date et heure de retour</label
             >
@@ -57,8 +59,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 custom-column">
-          <div class="mb-3">
+        <div class="custom-column">
+          <div>
             <label for="exampleInputEmail1" class="form-label"
               >Date et heure de depart</label
             >
@@ -73,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 custom-btn">
+        <div class="custom-btn">
           <button>NOUVELLE RECHERCHE</button>
         </div>
       </div>
@@ -90,16 +92,17 @@
 .divcont {
   padding: 10px 30px;
 }
-.divcont h1{
-    // background-color: #8da044;
-    font-size: 25px;
-    padding: 10px;
-    color: #fdb714;
+.divcont h1 {
+  // background-color: #8da044;
+  font-size: 25px;
+  padding: 25px 0px;
+  color: #fdb714;
 }
 .custom-column {
   padding: 10px;
   border-radius: 10px;
-  background-color: #fff;
+  // background-color: #f5f5f5;
+  margin: 0px;
   height: 110px;
 }
 .divisionseardate {
@@ -139,9 +142,11 @@ label {
   white-space: nowrap;
 }
 .custom-btn {
-  padding: 40px 0px;
+  padding: 40px 10px;
   border-radius: 10px;
   height: 110px;
+  // background-color: red;
+  margin: 0px;
 }
 .custom-btn button {
   width: 90%;
