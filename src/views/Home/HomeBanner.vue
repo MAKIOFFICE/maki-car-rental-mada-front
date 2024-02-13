@@ -14,8 +14,7 @@
       <div class="container divcont">
         <div class="container div-form">
           <h3>
-            Remplissez ce formulaire pour connaître nos offres de location de
-            voiture
+            {{ $t("formulaireHome") }}
           </h3>
           <hr />
           <!--  -->
@@ -63,13 +62,13 @@
               <div class="col">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Date et heure de retour</label
+                    >Date et heure de depart</label
                   >
                   <div class="divisionseardate">
                     <input
                       type="datetime-local"
                       class="form-control formcont"
-                      placeholder="Date de retour"
+                      placeholder="Date de depart"
                       value="2022-01-01T12:00"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
