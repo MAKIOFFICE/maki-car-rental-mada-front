@@ -123,6 +123,11 @@ const dataAuto = [
     title: "Service efficace",
     description: `Service efficace. La livraison a été effectuée à l'heure, la voiture a été propre et en bon état. La collection s'est bien passé. Je vais définitivement utiliser le service la prochain fois.`,
   },
+  {
+    name: "Jihane EJ",
+    title: "Parfait !",
+    description: `Parfait ! Très pratique Rapport qualité prix très correct.`,
+  },
 ];
 
 const router = useRouter();

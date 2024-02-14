@@ -10,6 +10,8 @@ import Franchise from '../views/details/Franchise/Franchise.vue'
 
 import Animate from '../components/Display/foot.vue'
 
+import NotFound from '../NotFound.vue';
+
 const routes = [
     {
         path: '/',
@@ -55,7 +57,8 @@ const routes = [
         path: '/animate',
         name: 'Animate',
         component: Animate
-    }
+    },
+    { path: '/:catchAll(.*)', component: NotFound }
 ]
 
 const router = createRouter({
