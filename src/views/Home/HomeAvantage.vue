@@ -4,7 +4,7 @@
       <div class="head">
         <div class="btndiv">
           <h1>
-            Encore plus d'avantages :
+            Encore plus d'avantages
           </h1>
         </div>
         <div class="container mt-4">
