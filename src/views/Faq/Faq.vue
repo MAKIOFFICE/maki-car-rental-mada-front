@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="head">
         <FaqHeader/>
         <FaqFirstCol/>
     </div>
@@ -10,4 +10,8 @@ import FaqHeader from './FaqHeader.vue';
 import FaqFirstCol from './FaqFirstCol.vue';
 
 </script>
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+.head{
+    background-color: #fff;
+}
+</style>

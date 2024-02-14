@@ -1,13 +1,15 @@
 <template>
-    <div>
+    <div class="header">
         <ContactHeader/>
         <ContactHead/>
-        <ContactOuv/>
     </div>
 </template>
 <script setup>
 import ContactHeader from './ContactHeader.vue'
 import ContactHead from './ContactHead.vue'
-import ContactOuv from './ContactOuv.vue'
 </script>
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+.header{
+    background-color: #fff;
+}
+</style>

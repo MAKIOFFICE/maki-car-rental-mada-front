@@ -1,146 +1,172 @@
 <template>
-<div>
-    <header class="container mt-3">
-        <div class="row">
-            <div class="col-md-8 cont">
-                <div class="container containToas" v-show="isVisible">
-                    <div role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-body d-flex">
-                            <span class="spanToasts"><i class="bi bi-exclamation-circle"></i></span>
-                            <p class="paraToas">Cher client, afin que nous puissions vous envoyer un devis, vous devez
-                                d'abord utiliser notre système pour vérifier la disponibilité des voitures. Vous y trouverez
-                                instantanément la liste des voitures disponibles, prêtes à être réservées, ainsi que leurs
-                                prix, incluant l'assurance et les frais de livraison.</p>
-                            <span class="icnX"><i class="bi bi-x" @click="handleClick"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <form class="contForm col-md-6">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label formlab1">VOTRE NOM</label>
-                        <input type="name" class="form-control" id="exampleInputEmail1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label formlab1">VOTRE ADRESSE EMAIL
-                        </label>
-                        <input type="email" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label formlab1">VOTRE NUMÉRO DE TÉLÉPHONE*</label>
-                        <input type="tel" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label formlab1">VOTRE DEMANDE</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <div id="emailHelp" class="form-text">* = facultatif</div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </div>
-                </form>
+  <div>
+    <header class="container divcont mt-3">
+      <div class="row">
+        <div class="col-md-8 cont">
+          <div class="containToas">
+            <h5>Contactez-nous</h5>
+            <p class="paraToas">
+              Cher client, afin que nous puissions vous envoyer un devis, vous
+              devez d'abord utiliser notre système pour vérifier la
+              disponibilité des voitures. Vous y trouverez instantanément la
+              liste des voitures disponibles, prêtes à être réservées, ainsi que
+              leurs prix, incluant l'assurance et les frais de livraison.
+            </p>
+          </div>
+          <form class="contForm">
+            <div class="mb-3">
+              <label class="form-label formlab1">VOTRE NOM</label>
+              <input type="name" class="form-control" placeholder="Votre nom" />
             </div>
-        
-            <div class="col-md-4">
-                <div class="dividivi">
-                    <h5>Contactez-nous</h5>
-                    <p>Retrouvez nos offres et bénéficiez de conseils d'experts</p>
-                    <div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-telephone-fill"></i></span>+49-931-663984-98</div>
-                        <div class="licontz"><span><i class="bi bi-envelope-fill"></i></span><a
-                            >booking@maki-car-rental.com</a></div>
-                    </div>
-                </div>
-
+            <div class="mb-3">
+              <label class="form-label formlab1">VOTRE ADRESSE EMAIL </label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Votre adresse email"
+              />
             </div>
+            <div class="mb-3">
+              <label class="form-label formlab1"
+                >VOTRE NUMÉRO DE TÉLÉPHONE*</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="votre numero de telephone"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label formlab1">VOTRE DEMANDE</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Ecrire ..."
+              ></textarea>
+              <div id="emailHelp" class="form-text">* = facultatif</div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn">Envoyer</button>
+            </div>
+          </form>
         </div>
+
+        <div class="col-md-4">
+          <div class="dividivi">
+            <h5>Contactez-nous</h5>
+            <p>Retrouvez nos offres et bénéficiez de conseils d'experts</p>
+            <div class="divhead">
+              <div class="divflex">
+                <div class="divicnspan">
+                  <span><i class="bi bi-house-fill"></i></span>
+                </div>
+                <div class="divnumberphone">
+                  <h6>Adresse</h6>
+                  <p>+49-931-663984-98</p>
+                </div>
+              </div>
+              <div class="divflex">
+                <div class="divicnspan">
+                  <span><i class="bi bi-telephone-fill"></i></span>
+                </div>
+                <div class="divnumberphone">
+                  <h6>Phone</h6>
+                  <p>+49-931-663984-98</p>
+                </div>
+              </div>
+              <div class="divflex">
+                <div class="divicnspan">
+                  <span><i class="bi bi-envelope-fill"></i></span>
+                </div>
+                <div class="divnumberphone">
+                  <h6>Email</h6>
+                  <p>+49-931-663984-98</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dividivi">
+            <h5>Nos horaires d'ouverture</h5>
+            <p>
+              Notre centre d'appel est ouvert de
+              <span
+                >lundi à vendredi de 8 h à 18 h a Samedi de 10 h à 15 h</span
+              >
+              (Heure d’Europe centrale).
+            </p>
+            <p>
+              Après avoir complété votre réservation, vous recevrez le numéro de
+              notre centre d'appels. Ce numéro est disponible 24/24 et7/7.
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
-</div>
+  </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-  
-  const isVisible = ref(true);
-    
-  const handleClick = () => {
-    isVisible.value = false;
-  };
-</script>
+<script setup></script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
+.divcont {
+  padding: 10px 50px 50px 50px;
+}
 .cont {
-    background-color: #fff;
-    padding: 20px;
+  padding: 20px 50px;
 }
 
-.formlab1 {
-    font-size: 12px;
-}
-.licontz {
-    width: 100%;
-    /* background-color: coral; */
-    font-size: 20px;
-    color: cornflowerblue;
-}
-.licontz span {
-    font-size: 1rem;
-    color: #fdb714;
-    /* background-color: aquamarine; */
-    padding: 5px;
+.containToas {
+  padding: 15px 0px;
 }
 .paraToas {
-    text-align: justify;
+  text-align: justify;
 }
-
+.formlab1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+button {
+  width: 20%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4995dd;
+  color: #fff;
+}
+button:hover {
+  color: #fff;
+}
 .dividivi {
-    background-color: #fff;
-    padding: 20px;
+  background-color: #e6faff;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 20px;
 }
-
-/* toasts */
-.containToas {
-    background-color: #6dace6;
-    /* margin-top: 20px; */
-    padding: 0px;
-    margin-bottom: 20px;
+.divflex {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  margin-top: 10px;
 }
-
-.licontz a {
-    color: #6dace6;
-    margin-left: 5px;
+.divicnspan {
+  padding: 5px 2px;
+  display: grid;
 }
-
-.spanToasts {
-    /* background-color: chartreuse; */
-    font-size: 2em;
-    padding-right: 10px;
-    color: #fff;
-    margin: 0px;
+.divicnspan span {
+  background-color: #4995dd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size: 1.5rem;
+  position: relative;
+  color: #fff;
 }
-
-.icnX {
-    font-size: 1.5rem;
-    /* background-color: #899e27; */
-    margin-top: -15px;
-    margin-left: 10px;
-    padding: 5px;
-    color: #fff;
+.divnumberphone {
+  padding-top: 3px;
 }
-
-.icnX i {
-    /* background-color: #2d3e52; */
-    cursor: pointer;
-}
-
-textarea,
-input {
-    background-color: #f5f5f5;
-    border: none;
+p{
+    text-align: justify;
 }
 </style>
