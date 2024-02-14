@@ -3,7 +3,7 @@
     <div class="container">
       <div class="containt">
         <img :src="NotFound" alt="icon" />
-        <h1>404 - Not Found</h1>
+        <h1>Not Found</h1>
         <p>
             La page que vous recherchez est peut-être en construction ou n'existe pas.
         </p>
