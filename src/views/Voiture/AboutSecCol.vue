@@ -358,7 +358,7 @@ const reserveBtn = () => {
 
 .modImage {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: #899e27;
   text-align: center;
 }
