@@ -80,7 +80,7 @@
                 </div>
                 <div class="divnumberphone">
                   <h6>Email</h6>
-                  <p>+49-931-663984-98</p>
+                  <p>booking@maki-car-rental.com</p>
                 </div>
               </div>
             </div>
@@ -127,8 +127,9 @@
   font-weight: 500;
 }
 button {
-  width: 20%;
-  height: 40px;
+//   width: 20%;
+//   height: 40px;
+  padding: 10px 20px;
   border: none;
   border-radius: 10px;
   background-color: #4995dd;

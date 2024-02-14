@@ -1,139 +1,138 @@
 <template>
-    <div>
-        <div class="container">
-    <div class="row">
-
+  <div>
+    <div class="container">
+      <div class="row">
         <div class="col-md-8">
-          <div class="commentclass">
-            <p class="paramcomclass">name a écrit le commentaire suivant sur <span class="spanlinkname"
-                  >Trustpilot</span>:</p>
-           <div>
-                <div class="d-flex divisflexname">
-                    <span class="spannameic"><i class="bi bi-quote"></i> </span>
-                    <h4 class="h4classname">title</h4>
-                </div>
-                <div class="divclassname">
-                    <p class="paramclassname">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, porro cumque? Quam, amet omnis culpa, corporis enim veniam sit recusandae iste, maiores blanditiis porro sed totam eos! Repellendus, amet ducimus.<span class="inverted-icon"><i
-                                class="bi bi-quote"></i></span>
-                    </p>
-                </div>
+          <div
+            class="commentclass"
+            v-for="(item, index) in dataAuto"
+            :key="index"
+          >
+            <p class="paramcomclass">
+              {{ item.name }} a écrit le commentaire suivant sur
+              <span class="spanlinkname">Trustpilot</span>:
+            </p>
+            <div>
+              <div class="d-flex divisflexname">
+                <span class="spannameic"><i class="bi bi-quote"></i> </span>
+                <h4 class="h4classname">{{ item.title }}</h4>
+              </div>
+              <div class="divclassname">
+                <p class="paramclassname">
+                  {{ item.description }}
+                  <span class="inverted-icon"><i class="bi bi-quote"></i></span>
+                </p>
+              </div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="col-md-4">
-            <div class="diviscont">
-                <h1 class="h1cont">Contactez-nous </h1>
-                <p class="paramcont">Retrouvez nos offres et bénéficiez de conseils d'experts</p>
-                <ul>
-                    <li class="licont"><span class="icnsp1"><i class="bi bi-telephone-fill"></i></span><span
-                            class="icnsp2">+49-931-663984-98</span></li>
-                    <li class="licont"><span class="icnsp1"><i class="bi bi-telephone-fill"></i></span><span
-                            class="icnsp2">+49-931-663984-98</span></li>
-                </ul>
-                <div class="divimcont">
-                    <img alt="Live chat offline" style="cursor: pointer" id="chat"
-                        src="https://d12ittivwictyd.cloudfront.net/images/locales/fr/chat_off.gif">
-                </div>
-            </div>
+          <div class="diviscont">
+            <h1 class="h1cont">Encore plus d'avantages :</h1>
+            <ul>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-shield-check"></i></span
+                ><span class="spnicnassur2">Assurance tous risques</span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"><i class="bi bi-truck"></i></span
+                ><span class="spnicnassur2">Livraison</span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-geo-alt-fill"></i></span
+                ><span class="spnicnassur2">GPS gratuit </span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-speedometer"></i></span
+                ><span class="spnicnassur2">Kilométrage illimité </span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-person-fill-add"></i></span
+                ><span class="spnicnassur2"
+                  >Un conducteur additionnel offert
+                </span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"><i class="bi bi-printer"></i></span
+                ><span class="spnicnassur2">Sièges enfants gratuits </span>
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"><i class="bi bi-clock"></i></span
+                ><span class="spnicnassur2 cursIcn">
+                  Aucun frais d'annulation jusqu'à 48 heures avant la date de
+                  livraison</span
+                >
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-piggy-bank-fill"></i></span
+                ><span class="spnicnassur2 cursIcn"
+                  >Prix tout compris, aucun frais caché</span
+                >
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"><i class="bi bi-check-lg"></i></span
+                ><span class="spnicnassur2 cursIcn"
+                  >Vous pouvez réserver un modèle précis, pas juste une
+                  catégorie</span
+                >
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-hand-thumbs-up-fill"></i></span
+                ><span class="spnicnassur2"
+                  >Uniquement des voitures récentes et de très bonne
+                  qualité</span
+                >
+              </li>
+              <li class="lispanassur">
+                <span class="spnicnassur1"
+                  ><i class="bi bi-sliders2-vertical"></i></span
+                ><span class="spnicnassur2"
+                  >Pas de frais supplémentaire pour les voitures
+                  automatiques</span
+                >
+              </li>
+            </ul>
 
-            <div class="diviscont">
-                <h1 class="h1cont">Encore plus d'avantages :</h1>
-                <ul>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-shield-check"></i></span><span
-                            class="spnicnassur2">Assurance tous risques</span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-truck"></i></span><span
-                            class="spnicnassur2">Livraison</span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-geo-alt-fill"></i></span><span
-                            class="spnicnassur2">GPS gratuit </span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-speedometer"></i></span><span
-                            class="spnicnassur2">Kilométrage illimité </span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-person-fill-add"></i></span><span
-                            class="spnicnassur2">Un conducteur additionnel offert </span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-printer"></i></span><span
-                            class="spnicnassur2">Sièges enfants gratuits </span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-clock"></i></span><span
-                            class="spnicnassur2 cursIcn"> Aucun frais d'annulation jusqu'à 48 heures
-                            avant la date de
-                            livraison</span></li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-piggy-bank-fill"></i></span><span
-                            class="spnicnassur2 cursIcn">Prix tout compris, aucun frais caché</span>
-                    </li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i class="bi bi-check-lg"></i></span><span
-                            class="spnicnassur2 cursIcn">Vous pouvez réserver un modèle précis, pas
-                            juste une catégorie</span>
-                    </li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i
-                                class="bi bi-hand-thumbs-up-fill"></i></span><span class="spnicnassur2">Uniquement des
-                            voitures récentes et de très bonne qualité</span>
-                    </li>
-                    <li class="lispanassur"><span class="spnicnassur1"><i
-                                class="bi bi-sliders2-vertical"></i></span><span class="spnicnassur2">Pas de frais
-                            supplémentaire pour les voitures automatiques</span>
-                    </li>
-                </ul>
+            <div class="divibtncontact">
+              <button @click="ContactBtn">Contactez-nous</button>
             </div>
-
-            <div class="diviscont">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">LIEU DE DÉPART</label>
-                        <div class="divisionseardate">
-                            <select class="form-select formcont" aria-label="Default select example"
-                                data-bs-toggle="modal" data-bs-target="#optionsModalOnes">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                            <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label classmargtop">LIEU DE RETOUR</label>
-                        <div class="divisionseardate">
-                            <select class="form-select formcont" aria-label="Default select example"
-                                data-bs-toggle="modal" data-bs-target="#optionsModalOnes">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                            <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label classmargtop">DATE ET HEURE DE DÉPART</label>
-                        <div class="divisionseardate">
-                            <input type="datetime-local" class="form-control formcont" id="form-control"
-                                value="2022-01-01T12:00">
-                            <span class="spandate"><i class="bi bi-calendar2-week"></i></span>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label classmargtop">DATE ET HEURE DE RETOUR</label>
-                        <div class="divisionseardate">
-                            <input type="datetime-local" class="form-control formcont" id="form-control"
-                                value="2022-01-01T12:00">
-                            <span class="spandate"><i class="bi bi-calendar2-week"></i></span>
-                        </div>
-                    </div>
-                    <div class="mb-3 mt-5">
-                        <div class="divisionsear">
-                            <button type="submit" class="form-control submitclass">AFFICHER LES OFFRES</button>
-                            <span class="spanserch"><i class="bi bi-check-lg"></i></span>
-                        </div>
-                    </div>
-                </form>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-    </div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
 
-<style lang='scss' scoped>
+const dataAuto = [
+  {
+    name: "Jean doe",
+    title: "Loueur sérieux",
+    description: `Notre expérience avec Maky s'est parfaitement déroulée. Échange facile durant notre séjour via une application. Voiture neuve et impeccable.`,
+  },
+  {
+    name: "Mohammud Ibrahim Javed Subdurally",
+    title: "Service efficace",
+    description: `Service efficace. La livraison a été effectuée à l'heure, la voiture a été propre et en bon état. La collection s'est bien passé. Je vais définitivement utiliser le service la prochain fois.`,
+  },
+];
+
+const router = useRouter();
+
+const ContactBtn = () => {
+  router.push("/contact");
+};
+</script>
+
+<style lang="scss" scoped>
 .commentclass {
   background-color: #fff;
   padding: 20px;
@@ -198,41 +197,6 @@ ul {
   padding-bottom: 15px;
   font-size: 25px;
 }
-
-.paramcont {
-  /* background-color: chartreuse; */
-  font-size: 16px;
-}
-
-.icnsp1 {
-  /* background-color: red; */
-  font-size: 1.4rem;
-  color: #fdb714;
-}
-
-.icnsp2 {
-  /* background-color: rgb(43, 117, 45); */
-  color: #6dace6;
-  font-size: 1.5rem;
-  margin-left: 10px;
-
-}
-
-.licont {
-  /* background-color: rgb(228, 130, 16); */
-  margin-top: 10px;
-}
-
-.divimcont {
-  /* background-color: gold; */
-  margin-top: 25px;
-  text-align: center;
-}
-
-.divimcont img {
-  height: 80px;
-}
-
 /* 2em */
 .lispanassur {
   display: flex;
@@ -260,52 +224,16 @@ ul {
 .cursIcn {
   cursor: pointer;
 }
-.divisionsear {
-  position: relative;
-  background-color: #6dace6;
-}
-.spanserch {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 0;
-  left: 85%;
-  width: 15%;
-  height: 100%;
-  background-color: #7c9609;
-  color: white;
+.divibtncontact {
+  margin-top: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
-.submitclass {
-  background-color: #899e27;
+.divibtncontact button {
+  width: 100%;
+  border: none;
+  padding: 8px 12px;
   color: #fff;
-}
-.form-label {
-  font-size: 16px;
-}
-.divisionseardate {
-  position: relative;
-}
-.spandate {
-  font-size: 1rem;
-  position: absolute;
-  z-index: 5;
-  top: 0;
-  left: 85%;
-  width: 15%;
-  height: 100%;
-  background-color: #fdb714;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-.formcont::-webkit-calendar-picker-indicator {
-  position: relative;
-  z-index: 20;
-  cursor: pointer;
-  opacity: 0;
+  background-color: #333;
 }
 </style>

@@ -242,8 +242,6 @@
                           </div>
                         </div>
                       </span>
-
-                      <!-- span hover deb-->
                     </div>
                     <div class="divipric">
                       <p class="ppric">Pas de surcharge aéroport !</p>
@@ -393,6 +391,9 @@ const reserveBtn = () => {
 .divisp {
   color: rgba(0, 0, 0, 0.271);
 }
+.divisp:hover{
+  color: #6dace6;
+}
 
 .span {
   font-size: 30px;
@@ -417,8 +418,8 @@ const reserveBtn = () => {
   background-color: #899e27;
   border: none;
   color: #fff;
+  border-radius: 20px;
   /* margin-top: 5px; */
-  /* padding: 0px 5px; */
 }
 
 .ppric {

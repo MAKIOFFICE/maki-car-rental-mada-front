@@ -1,13 +1,19 @@
 <template>
-    <div>
-      <MessageHeader/>
-      <MessageContaint/>
-    </div>
+  <div class="head">
+    <MessageHeader />
+    <AboutForm />
+    <MessageContaint />
+  </div>
 </template>
 
 <script setup>
-import MessageHeader from './MessageHeader.vue'
-import MessageContaint from './MessageContaint.vue'
+import MessageHeader from "./MessageHeader.vue";
+import MessageContaint from "./MessageContaint.vue";
+import AboutForm from "../../Voiture/AboutForm.vue";
 </script>
 
-<style lang='scss' scoped></style>
+<style lang="scss" scoped>
+.head{
+  background-color: #fff;
+}
+</style>

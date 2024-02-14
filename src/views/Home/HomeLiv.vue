@@ -80,11 +80,12 @@
   left: 85%;
   width: 15%;
   height: 100%;
-  background-color: #fdb714;
+  // background-color: #fdb714;
+  // border: 1px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #fdb714;
 }
 
 .formcont::-webkit-calendar-picker-indicator {
