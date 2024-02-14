@@ -11,7 +11,7 @@
           </p>
         </div>
       </div>
-      <div class="container divcont">
+      <div class="container">
         <div class="container div-form">
           <h3>
             {{ $t("formulaireHome") }}

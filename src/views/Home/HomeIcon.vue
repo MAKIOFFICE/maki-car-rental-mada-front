@@ -52,7 +52,6 @@
 <script setup></script>
 <style lang='scss' scoped>
 .head {
-    padding-left: 60px;
     padding-top: 50px;
     background-color: #f5f5f5;
 }

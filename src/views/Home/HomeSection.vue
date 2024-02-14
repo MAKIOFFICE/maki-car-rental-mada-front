@@ -25,7 +25,7 @@
           <img
             src="../../assets/image/HomeImg/isalo.jpg"
             alt="Anse Intendance Mahé"
-            class="img-fluid"
+            class="img-fluid imagleft"
           />
         </div>
       </div>
@@ -78,7 +78,7 @@
         <div class="col-md-6 divimg">
           <img
             alt="Anse Kerlan Praslin"
-            class="img-responsive"
+            class="img-responsive imagleft"
             src="../../assets/image/HomeImg/baobab.jpg"
           />
         </div>
@@ -96,11 +96,14 @@
 }
 .divimg {
   padding: 0;
+  // background-color: red;
+
 }
 .divimg img {
-  width: 100%;
+  width: 95%;
   height: auto;
   border-radius: 50px;
+  
 }
 .firsttitle {
   // background-color: aqua;
@@ -113,13 +116,17 @@
 }
 .firstparam {
   text-align: justify;
-  padding-right: 50px;
+  // padding-right: 50px;
+  // background: red;
 }
 .secondparam {
   text-align: justify;
-  padding-left: 50px;
+  // padding-left: 50px;
 }
 .rowmargtop {
   margin-top: 5rem;
+}
+.imagleft{
+  float: right;
 }
 </style>
