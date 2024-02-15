@@ -1,26 +1,30 @@
 <template>
-    <div>
-
-        <div class="container">
+  <div>
+    <div class="container">
       <div class="row">
         <!-- Première colonne -->
         <div class="col-md-8 grandDivforminp">
-          <div class="container containToas"  v-show="isVisible">
+          <div class="container containToas" v-show="isVisible">
             <div role="alert" aria-live="assertive" aria-atomic="true">
               <div class="toast-body d-flex">
-                <span class="spanToasts"><i class="bi bi-exclamation-circle"></i></span>
+                <span class="spanToasts"
+                  ><i class="bi bi-exclamation-circle"></i
+                ></span>
                 <p class="paraToas">
-                  Conseil: Transfert depuis l'aéroport pour seulement ~23 € — ~45 € (1 à
-                  3½ personnes) ou ~64 € — ~77 € (4 à 9 personnes) par trajet. Ce
-                  transfert prend en charge uniquement vos passagers et vous-même, et vous
-                  conduit directement à l'endroit de votre choix. Ainsi, le chemin vers
-                  votre hôtel sera un veritable moment de détente après un vol fatigant.
-                  Vous pourrez peut-être même économiser une partie des frais de livraison
-                  si votre voiture doit vous être livrée à l'hôtel et non à l'aéroport. Si
-                  vous êtes intéressé par un transfert, veuillez le mentionner dans le
-                  champ «Souhaits particuliers».
+                  Conseil: Transfert depuis l'aéroport pour seulement ~23 € —
+                  ~45 € (1 à 3½ personnes) ou ~64 € — ~77 € (4 à 9 personnes)
+                  par trajet. Ce transfert prend en charge uniquement vos
+                  passagers et vous-même, et vous conduit directement à
+                  l'endroit de votre choix. Ainsi, le chemin vers votre hôtel
+                  sera un veritable moment de détente après un vol fatigant.
+                  Vous pourrez peut-être même économiser une partie des frais de
+                  livraison si votre voiture doit vous être livrée à l'hôtel et
+                  non à l'aéroport. Si vous êtes intéressé par un transfert,
+                  veuillez le mentionner dans le champ «Souhaits particuliers».
                 </p>
-                <span class="icnX"><i class="bi bi-x" @click="handleClick"></i></span>
+                <span class="icnX"
+                  ><i class="bi bi-x" @click="handleClick"></i
+                ></span>
               </div>
             </div>
           </div>
@@ -45,21 +49,35 @@
                   <div class="divspan"></div>
                 </div>
                 <!-- Carte assurance -->
-                <div class="col-lg-3 col-md-6 custom-lg-columns p-0 bg-white text-center divpar" v-for="(item, index) in dataAssurance" :key="index">
-                    <h1 class="cdwcol">{{ item.title }}</h1>
-                    <p class="col1o">{{ item.tarif }}</p>
-                    <p>{{ item.franchise }}</p>
-                    <p class="col1o">{{ item.acompte }}</p>
-                   <p> <img :src="item.civilResponsability" alt="icon" /></p>
-                    <p class="col1o"><img :src="item.antivolProtection" alt="icon" /></p>
-                    <p> <img :src="item.extRetrovisor" alt="icon x" /></p>
-                    <p class="col1o"><img :src="item.underCaisse" alt="icon x" /></p>
-                    <p><img :src="item.glassBroken" alt="icon" /></p>
-                    <p class="col1o"><img :src="item.pneu" alt="icon" /></p>
-                    <p>{{ item.depannageService }}</p>
-                    <div class="divspan">
-                    <span class="span"
-                      ><a class="">choix</a></span
+                <div
+                  class="col-lg-3 col-md-6 custom-lg-columns p-0 bg-white text-center divpar"
+                  :style="{
+                    boxShadow: boxShadows[index],
+                    transform: transforms[index],
+                  }"
+                  v-for="(item, index) in dataAssurance"
+                  :key="index"
+                >
+                  <h1 class="cdwcol">{{ item.title }}</h1>
+                  <p class="col1o">{{ item.tarif }}</p>
+                  <p>{{ item.franchise }}</p>
+                  <p class="col1o">{{ item.acompte }}</p>
+                  <p><img :src="item.civilResponsability" alt="icon" /></p>
+                  <p class="col1o">
+                    <img :src="item.antivolProtection" alt="icon" />
+                  </p>
+                  <p><img :src="item.extRetrovisor" alt="icon x" /></p>
+                  <p class="col1o">
+                    <img :src="item.underCaisse" alt="icon x" />
+                  </p>
+                  <p><img :src="item.glassBroken" alt="icon" /></p>
+                  <p class="col1o"><img :src="item.pneu" alt="icon" /></p>
+                  <p>{{ item.depannageService }}</p>
+                  <div class="divspan">
+                    <span class="span" @click="changeContent(index)"
+                      ><a>{{
+                        buttons[index]
+                      }}</a></span
                     >
                   </div>
                 </div>
@@ -70,24 +88,30 @@
           <div>
             <ol>
               <li>
-                pas encore habitué au concept de franchise?<a @click="franchiseBtn">
+                pas encore habitué au concept de franchise?<a
+                  @click="franchiseBtn"
+                  class="addFranchise"
+                >
                   Pour en savoir plus, cliquez ici</a
                 >
               </li>
               <li>~304 €</li>
-              <li>seulement pour les dommages au-delà du montant de la franchise</li>
               <li>
-                jusqu'à 150 million RsMU (~3 million €) de dommages corporels et jusqu'à
-                25 million RsMU (~510 000 €) de dommages matériels
+                seulement pour les dommages au-delà du montant de la franchise
               </li>
               <li>
-                seul le service de dépannage premium couvrira également les frais de
-                service pour les problèmes auto-infligés avec les pneus, la batterie et
-                les clés
+                jusqu'à 150 million RsMU (~3 million €) de dommages corporels et
+                jusqu'à 25 million RsMU (~510 000 €) de dommages matériels
+              </li>
+              <li>
+                seul le service de dépannage premium couvrira également les
+                frais de service pour les problèmes auto-infligés avec les
+                pneus, la batterie et les clés
               </li>
               <li>~121 €</li>
               <li>
-                payable en espèces ou par carte de crédit à la récupération du véhicule
+                payable en espèces ou par carte de crédit à la récupération du
+                véhicule
               </li>
               <li>
                 ex: pour les retards de restitution, le carburant manquant, les
@@ -106,7 +130,9 @@
                       <option selected>Choose...</option>
                       <option>...</option>
                     </select>
-                    <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
+                    <span class="spandate"
+                      ><i class="bi bi-caret-down-fill"></i
+                    ></span>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -118,7 +144,9 @@
                       <option selected>Choose...</option>
                       <option>...</option>
                     </select>
-                    <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
+                    <span class="spandate"
+                      ><i class="bi bi-caret-down-fill"></i
+                    ></span>
                   </div>
                 </div>
 
@@ -131,7 +159,9 @@
                       <option selected>Choose...</option>
                       <option>...</option>
                     </select>
-                    <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
+                    <span class="spandate"
+                      ><i class="bi bi-caret-down-fill"></i
+                    ></span>
                   </div>
                 </div>
 
@@ -141,12 +171,18 @@
                   >
                   <div class="d-flex flex-wrap">
                     <div class="form-check me-3">
-                      <input class="form-check-input" type="checkbox" id="gps" />
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gps"
+                      />
                       <label class="form-check-label formlabelinpgps" for="gps"
                         >GPS</label
                       >
                       <div class="img-container">
-                        <span class="icspgp"><i class="bi bi-info-circle"></i></span>
+                        <span class="icspgp"
+                          ><i class="bi bi-info-circle"></i
+                        ></span>
                         <span class="img-title" data-title="TrustPilot">
                           <h6>offert</h6>
                         </span>
@@ -169,7 +205,9 @@
                         >REHAUSSEUR</label
                       >
                       <div class="img-container">
-                        <span class="icspgp"><i class="bi bi-info-circle"></i></span>
+                        <span class="icspgp"
+                          ><i class="bi bi-info-circle"></i
+                        ></span>
                         <span class="img-title" data-title="TrustPilot">
                           <h6>offert</h6>
                         </span>
@@ -193,15 +231,17 @@
                         >SIÈGE BÉBÉ</label
                       >
                       <div class="img-container">
-                        <span class="icspgp"><i class="bi bi-info-circle"></i></span>
+                        <span class="icspgp"
+                          ><i class="bi bi-info-circle"></i
+                        ></span>
                         <span class="img-title" data-title="TrustPilot">
                           <h6>Tarif par jour</h6>
                         </span>
                       </div>
                     </div>
                     <p class="paramMer">
-                      Merci de nous indiquer l'âge et le poids de votre enfant dans le
-                      champ "Souhaits particuliers".
+                      Merci de nous indiquer l'âge et le poids de votre enfant
+                      dans le champ "Souhaits particuliers".
                     </p>
                   </div>
                 </div>
@@ -223,12 +263,16 @@
                   <option selected>M.</option>
                   <option>Mme.</option>
                 </select>
-                <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
+                <span class="spandate"
+                  ><i class="bi bi-caret-down-fill"></i
+                ></span>
               </div>
             </div>
             <div class="col-md-6"></div>
             <div class="col-md-6">
-              <label for="inputEmail4" class="form-label formlabelinp">PRÉNOM</label>
+              <label for="inputEmail4" class="form-label formlabelinp"
+                >PRÉNOM</label
+              >
               <input type="text" class="form-control input" id="inputEmail4" />
               <div class="form-text">Veuillez saisir votre prénom.</div>
             </div>
@@ -236,7 +280,11 @@
               <label for="inputPassword4" class="form-label formlabelinp"
                 >NOM DE FAMILLE</label
               >
-              <input type="text" class="form-control input" id="inputPassword4" />
+              <input
+                type="text"
+                class="form-control input"
+                id="inputPassword4"
+              />
               <div class="form-text">Veuillez saisir votre nom de famille.</div>
             </div>
             <div class="col-md-6">
@@ -252,17 +300,27 @@
               <label for="inputPassword4" class="form-label formlabelinp"
                 >CODE POSTAL* / VILLE</label
               >
-              <input type="text" class="form-control input" id="inputPassword4" />
-              <div class="form-text">Veuillez saisir le nom de votre ville.</div>
+              <input
+                type="text"
+                class="form-control input"
+                id="inputPassword4"
+              />
+              <div class="form-text">
+                Veuillez saisir le nom de votre ville.
+              </div>
             </div>
             <div class="col-md-6">
-              <label for="inputEmail4" class="form-label formlabelinp">PAYS</label>
+              <label for="inputEmail4" class="form-label formlabelinp"
+                >PAYS</label
+              >
               <div class="divisionseardate">
                 <select class="form-select input formcont">
                   <option selected>Choose...</option>
                   <option>...</option>
                 </select>
-                <span class="spandate"><i class="bi bi-caret-down-fill"></i></span>
+                <span class="spandate"
+                  ><i class="bi bi-caret-down-fill"></i
+                ></span>
               </div>
             </div>
             <div class="col-md-6"></div>
@@ -272,16 +330,20 @@
               >
               <input type="email" class="form-control input" id="inputEmail4" />
               <div class="form-text">
-                Nous avons besoin de votre adresse mail pour communiquer avec vous. Nous
-                n'allons pas vous envoyer d'emails non sollicités ou vendre vos données
-                personnelles !
+                Nous avons besoin de votre adresse mail pour communiquer avec
+                vous. Nous n'allons pas vous envoyer d'emails non sollicités ou
+                vendre vos données personnelles !
               </div>
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label formlabelinp"
                 >VOTRE NUMÉRO DE TÉLÉPHONE*</label
               >
-              <input type="tel" class="form-control input" id="inputPassword4" />
+              <input
+                type="tel"
+                class="form-control input"
+                id="inputPassword4"
+              />
             </div>
           </form>
           <hr class="mt-5" />
@@ -301,7 +363,9 @@
                     checked
                   />
                   <ul class="ulclassname">
-                    <li>VIREMENT BANCAIRE (COMPTE BANCAIRE SITUE EN ALLEMANGNE)</li>
+                    <li>
+                      VIREMENT BANCAIRE (COMPTE BANCAIRE SITUE EN ALLEMANGNE)
+                    </li>
                     <li class="d-flex">
                       <span>DEVISE:</span
                       ><select id="inputState" class="form-select selecbtninp">
@@ -413,7 +477,11 @@
               <label for="inputPassword4" class="form-label formlabelinp"
                 >N° DE VOTRE VOL RETOUR*</label
               >
-              <input type="text" class="form-control input" id="inputPassword4" />
+              <input
+                type="text"
+                class="form-control input"
+                id="inputPassword4"
+              />
             </div>
             <div class="col-md-10">
               <label for="inputAddress" class="form-label">HÔTEL*</label>
@@ -440,8 +508,8 @@
                 >JE CONFIRME AVOIR LU ET APPROUVÉ LES CGV.</label
               >
               <div class="form-text formtextmaj">
-                VOUS DEVEZ ACCEPTER NOS CONDITIONS DE VENTE AFIN DE FINALISER UNE
-                RÉSERVATION.
+                VOUS DEVEZ ACCEPTER NOS CONDITIONS DE VENTE AFIN DE FINALISER
+                UNE RÉSERVATION.
               </div>
             </div>
             <div class="form-check marge">
@@ -452,8 +520,8 @@
                 id="flexCheckDefault"
               />
               <label class="form-check-label" for="flexCheckDefault"
-                >LES CONDUCTEURS DOIVENT ÊTRE ÂGÉS D'AU MOINS 21 ANS AU MOMENT DE LA
-                LOCATION.</label
+                >LES CONDUCTEURS DOIVENT ÊTRE ÂGÉS D'AU MOINS 21 ANS AU MOMENT
+                DE LA LOCATION.</label
               >
               <div class="form-text formtextmaj">REQUIS</div>
             </div>
@@ -465,17 +533,24 @@
           <div class="headers">
             <h2 class="Votres">Votre réservation</h2>
             <div class="clearfixe text-center">
-              <img src="../../../assets/image/HomeImg/photos4.jpg" width="203" height="98" />
+              <img
+                src="../../../assets/image/HomeImg/photos4.jpg"
+                width="203"
+                height="98"
+              />
               <h5 class="h5name">name</h5>
               <small>AUTOMATIQUE</small>
             </div>
             <div>
               <div class="date">
                 <p class="pcal">
-                  <span class="spcal"><i class="bi bi-calendar2-minus-fill"></i></span
+                  <span class="spcal"
+                    ><i class="bi bi-calendar2-minus-fill"></i></span
                   >DATE
                 </p>
-                <p class="dated">04/01/2024 <i class="bi bi-arrows"></i> 09/01/2024</p>
+                <p class="dated">
+                  04/01/2024 <i class="bi bi-arrows"></i> 09/01/2024
+                </p>
               </div>
               <div class="date">
                 <p class="pcal">
@@ -520,11 +595,14 @@
           </div>
           <div class="headers">
             <h1 class="contactnous">Contactez-nous</h1>
-            <p class="param">Retrouvez nos offres et bénéficiez de conseils d'experts</p>
+            <p class="param">
+              Retrouvez nos offres et bénéficiez de conseils d'experts
+            </p>
             <div class="divCont">
               <div>
                 <p class="paraTel">
-                  <span class="drap"><i class="bi bi-telephone-inbound-fill"></i></span
+                  <span class="drap"
+                    ><i class="bi bi-telephone-inbound-fill"></i></span
                   >+49-931-663984-98
                 </p>
                 <p class="paraTel">
@@ -536,8 +614,8 @@
           </div>
           <div class="headers">
             <p class="param">
-              Nos coupons sont aussi disponibles sur l'application Wallet d'Apple ou sur
-              l'application WalletPasses d'Android.
+              Nos coupons sont aussi disponibles sur l'application Wallet
+              d'Apple ou sur l'application WalletPasses d'Android.
             </p>
             <div class="divCont">
               <div class="text-center">
@@ -564,67 +642,91 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script setup>
 import { useRouter } from "vue-router";
-import check from '../../../assets/icons/check.svg';
-import checkround from '../../../assets/icons/checkround.svg';
-import warning from '../../../assets/icons/warning.svg'
-import { ref } from 'vue';
-  
+import check from "../../../assets/icons/check.svg";
+import checkround from "../../../assets/icons/checkround.svg";
+import warning from "../../../assets/icons/warning.svg";
+import { ref } from "vue";
+
 const isVisible = ref(true);
-  
+
 const handleClick = () => {
   isVisible.value = false;
 };
 const router = useRouter();
 
 const dataAssurance = [
-    {
-        title : "CDW",
-        tarif : "inclus",
-        franchise : "15 000 RsMU²",
-        acompte : "aucun",
-        civilResponsability : checkround,
-        antivolProtection : checkround,
-        extRetrovisor : check,
-        underCaisse : check,
-        glassBroken : warning,
-        pneu : warning,
-        depannageService : "standard"
-    },
-    {
-        title : "SCDW",
-        tarif : "5,06 € par jour",
-        franchise : "aucun",
-        acompte : "6 000 RsMU",
-        civilResponsability : checkround,
-        antivolProtection : checkround,
-        extRetrovisor : check,
-        underCaisse : check,
-        glassBroken : checkround,
-        pneu : checkround,
-        depannageService : "standard"
-    },
-    {
-        title : "SCDW+",
-        tarif : "7,89 € par jour",
-        franchise : "aucun",
-        acompte : "4 000 RsMU",
-        civilResponsability :checkround,
-        antivolProtection : checkround,
-        extRetrovisor :checkround,
-        underCaisse : checkround,
-        glassBroken :checkround,
-        pneu : checkround,
-        depannageService : "premium5"
-    },
-]
+  {
+    title: "CDW",
+    tarif: "inclus",
+    franchise: "15 000 RsMU²",
+    acompte: "aucun",
+    civilResponsability: checkround,
+    antivolProtection: checkround,
+    extRetrovisor: check,
+    underCaisse: check,
+    glassBroken: warning,
+    pneu: warning,
+    depannageService: "standard",
+    button: "choisir",
+  },
+  {
+    title: "SCDW",
+    tarif: "5,06 € par jour",
+    franchise: "aucun",
+    acompte: "6 000 RsMU",
+    civilResponsability: checkround,
+    antivolProtection: checkround,
+    extRetrovisor: check,
+    underCaisse: check,
+    glassBroken: checkround,
+    pneu: checkround,
+    depannageService: "standard",
+    button: "choisir",
+  },
+  {
+    title: "SCDW+",
+    tarif: "7,89 € par jour",
+    franchise: "aucun",
+    acompte: "4 000 RsMU",
+    civilResponsability: checkround,
+    antivolProtection: checkround,
+    extRetrovisor: checkround,
+    underCaisse: checkround,
+    glassBroken: checkround,
+    pneu: checkround,
+    depannageService: "premium5",
+    button: "choisir",
+  },
+];
 
 const franchiseBtn = () => {
   router.push("/franchise");
+};
+
+const boxShadows = ref([
+  "0 10px 20px rgba(0, 0, 0, 0.3), 0 30px 50px rgba(0, 0, 0, 0.5)",
+  "none",
+  "none",
+]);
+const transforms = ref(["scale(1.02)", "none", "none"]);
+
+const buttons = ref(["votre choix", "choisir", "choisir"]);
+
+const changeContent = (index) => {
+  transforms.value.fill("scale(1)");
+  boxShadows.value.fill("none");
+
+  buttons.value.fill("choisir");
+  buttons.value[index] = "votre choix";
+
+  transforms.value[index] = "scale(1.02)";
+  boxShadows.value[index] =
+    "0 10px 20px rgba(0, 0, 0, 0.3), 0 30px 50px rgba(0, 0, 0, 0.5)";
 };
 </script>
 
@@ -966,8 +1068,6 @@ label {
   color: #6dace6;
 }
 
-
-
 .paypalcount {
   cursor: pointer;
 }
@@ -1038,9 +1138,13 @@ label {
 .img-container:hover .img-title {
   display: inline-block;
 }
-.divpar:hover {
-  transform: scale(1.02);
-  position: relative;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 30px 50px rgba(0, 0, 0, 0.5);
+// .divpar:hover {
+//   transform: scale(1.02);
+//   position: relative;
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 30px 50px rgba(0, 0, 0, 0.5);
+// }
+.addFranchise {
+  color: #6dace6;
+  cursor: pointer;
 }
 </style>

@@ -27,11 +27,18 @@
                     >Lieu de depart</label
                   >
                   <div class="divisionseardate">
-                    <input
-                      type="text"
-                      class="form-control formcont"
-                      placeholder="Lieu de depart"
-                    />
+                    <select
+                      class="form-select formcont"
+                      aria-label="Default select example"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                     <span class="spandate"
                       ><i class="bi bi-caret-down-fill"></i
                     ></span>
@@ -46,11 +53,18 @@
                     >Lieu de retour</label
                   >
                   <div class="divisionseardate">
-                    <input
-                      type="text"
-                      class="form-control formcont"
-                      placeholder="Lieu de retour"
-                    />
+                    <select
+                    class="form-select formcont"
+                      aria-label="Default select example"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@example"
+                    >
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                     <span class="spandate"
                       ><i class="bi bi-caret-down-fill"></i
                     ></span>
@@ -68,7 +82,6 @@
                     <input
                       type="datetime-local"
                       class="form-control formcont"
-                      placeholder="Date de depart"
                       value="2022-01-01T12:00"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
@@ -86,7 +99,6 @@
                     <input
                       type="datetime-local"
                       class="form-control formcont"
-                      placeholder="Date de retour"
                       value="2022-01-01T12:00"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
@@ -96,13 +108,59 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               <div class="ms-auto">
-                <button class="">Afficher les offres ⇨</button>
+                <button class="button">Afficher les offres ⇨</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <div class="divisionseardate">
+                  <input
+                    type="text"
+                    class="form-control formcont"
+                    placeholder="Faite votre recherche ici"
+                  />
+                  <span class="spandate"><i class="bi bi-search"></i></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <ul class="list-group">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal fin -->
   </div>
 </template>
 
@@ -146,7 +204,7 @@ h3 {
   font-size: 18px;
   margin: 0px 0px 8px;
 }
-button {
+.button {
   color: #fff;
   background-color: #8da044;
   padding: 10px;
@@ -176,6 +234,7 @@ button {
   justify-content: center;
   color: #fdb714;
   border-radius: 8px;
+  cursor: pointer;
 }
 .formcont {
   border-radius: 8px;

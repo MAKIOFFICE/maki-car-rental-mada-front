@@ -1,11 +1,11 @@
 <template>
 <div>
     <div class="container mt-3">
-      <div class="row justify-content-around">
-        <div class="col-md-6">
+      <div class="divflex">
+        <div class="btval">
           <button type="button" class="btnvalidation" @click="returnBtn">⇦ Retour</button>
         </div>
-        <div class="col-md-6">
+        <div class="btval">
           <button type="button" class="btnvalidation">Valider ⇨</button>
           <p class="parambtnval">
             Vous pourrez vérifier à nouveau vos informations à l'étape suivante, avant de
@@ -39,8 +39,17 @@ const returnBtn = () => {
 }
 
 .parambtnval {
-  width: 400px;
+  width: 90%;
   padding: 10px;
   margin-top: 10px;
+  // background-color: gold;
+  text-align: justify;
+}
+.divflex{
+  display: flex;
+}
+.btval{
+  // background-color: red;
+  width: 50%;
 }
 </style>
