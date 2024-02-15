@@ -75,9 +75,7 @@
                   <p>{{ item.depannageService }}</p>
                   <div class="divspan">
                     <span class="span" @click="changeContent(index)"
-                      ><a>{{
-                        buttons[index]
-                      }}</a></span
+                      ><a>{{ buttons[index] }}</a></span
                     >
                   </div>
                 </div>
@@ -221,6 +219,7 @@
                         size="1"
                         type="number"
                         value="0"
+                        v-model="siegeBebe"
                         class="ms-2 text-center input"
                         id="siegeBebe"
                       />
@@ -240,8 +239,7 @@
                       </div>
                     </div>
                     <p class="paramMer">
-                      Merci de nous indiquer l'âge et le poids de votre enfant
-                      dans le champ "Souhaits particuliers".
+                      {{ texteAffiche }}
                     </p>
                   </div>
                 </div>
@@ -373,10 +371,7 @@
                       </select>
                     </li>
                     <li>
-                      <span class="spanlioption">
-                        'REGLER 100% MAINTENANT' : 'REGLER SEULEMENT 16 €
-                        MAINTENANT'</span
-                      >
+                      <span class="spanlioption"> {{ buttonText }}</span>
                     </li>
                   </ul>
                 </div>
@@ -401,10 +396,7 @@
                       </select>
                     </li>
                     <li>
-                      <span class="spanlioption">
-                        'REGLER 100% MAINTENANT' : 'REGLER SEULEMENT 16 €
-                        MAINTENANT'</span
-                      >
+                      <span class="spanlioption"> {{ buttonText }}</span>
                     </li>
                   </ul>
                 </div>
@@ -445,6 +437,7 @@
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
+                    @click="changeText"
                   />
                   <ul class="ulclassname">
                     <li>PAYEMENT SUR PLACE (EN ESPECES)</li>
@@ -650,7 +643,7 @@ import { useRouter } from "vue-router";
 import check from "../../../assets/icons/check.svg";
 import checkround from "../../../assets/icons/checkround.svg";
 import warning from "../../../assets/icons/warning.svg";
-import { ref } from "vue";
+import { ref,watch } from "vue";
 
 const isVisible = ref(true);
 
@@ -728,6 +721,27 @@ const changeContent = (index) => {
   boxShadows.value[index] =
     "0 10px 20px rgba(0, 0, 0, 0.3), 0 30px 50px rgba(0, 0, 0, 0.5)";
 };
+
+const buttonText = ref("REGLER 100% MAINTENANT");
+
+const changeText = () => {
+  buttonText.value =
+    buttonText.value === "REGLER 100% MAINTENANT"
+      ? "REGLER SEULEMENT 16 € MAINTENANT"
+      : "REGLER 100% MAINTENANT";
+};
+
+const siegeBebe = ref(0);
+
+const texteAffiche = ref("");
+
+watch(siegeBebe, (newValue) => {
+  if (newValue === 1 || newValue === 2) {
+    texteAffiche.value = "Merci de nous indiquer l'âge et le poids de votre enfant dans le champ Souhaits particuliers.";
+  } else {
+    texteAffiche.value = "";
+  }
+});
 </script>
 
 <style lang="scss" scoped>
