@@ -499,7 +499,9 @@ const reserveBtn = () => {
 .img-container:hover .img-title {
   display: inline-block;
 }
-
+.modal-title{
+  color: #333;
+}
 .spnicons {
   font-size: 3rem;
 }
