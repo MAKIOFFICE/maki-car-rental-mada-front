@@ -194,7 +194,7 @@
                         size="1"
                         type="number"
                         value="0"
-                        class="ms-2 text-center input"
+                        class="ms-2 text-center"
                         id="rehausseur"
                       />
                       <label
@@ -220,7 +220,7 @@
                         type="number"
                         value="0"
                         v-model="siegeBebe"
-                        class="ms-2 text-center input"
+                        class="ms-2 text-center"
                         id="siegeBebe"
                       />
 
@@ -485,7 +485,7 @@
                 >SOUHAITS PARTICULIERS*</label
               >
               <textarea
-                class="form-control input"
+                class="form-control inputArea"
                 id="exampleFormControlTextarea1"
                 rows="3"
               ></textarea>
@@ -998,7 +998,6 @@ ol li {
   margin-left: 5px;
   color: #899e27;
 }
-
 .h2coO {
   /* background-color: #fdb714; */
   font-size: 25px;
@@ -1066,8 +1065,12 @@ label {
 }
 
 .input {
-  background-color: #f5f5f5;
-  border: none;
+  border-radius: 8px;
+  height: 50px;
+}
+.inputArea{
+  border-radius: 8px;
+  height: 150px;
 }
 
 .form-check-input {

@@ -150,6 +150,7 @@ const toggleIconNext = (buttonNumber) => {
   padding: 0;
   display: flex;
   padding: 10px 0px;
+  border-radius: 8px;
 }
 .lititle {
   width: 94%;

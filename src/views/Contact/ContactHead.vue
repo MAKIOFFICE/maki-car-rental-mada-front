@@ -16,13 +16,13 @@
           <form class="contForm">
             <div class="mb-3">
               <label class="form-label formlab1">VOTRE NOM</label>
-              <input type="name" class="form-control" placeholder="Votre nom" />
+              <input type="name" class="form-control formcont" placeholder="Votre nom" />
             </div>
             <div class="mb-3">
               <label class="form-label formlab1">VOTRE ADRESSE EMAIL </label>
               <input
                 type="email"
-                class="form-control"
+                class="form-control formcont"
                 placeholder="Votre adresse email"
               />
             </div>
@@ -32,14 +32,14 @@
               >
               <input
                 type="tel"
-                class="form-control"
+                class="form-control formcont"
                 placeholder="votre numero de telephone"
               />
             </div>
             <div class="mb-3">
               <label class="form-label formlab1">VOTRE DEMANDE</label>
               <textarea
-                class="form-control"
+                class="form-control formtextarea"
                 rows="3"
                 placeholder="Ecrire ..."
               ></textarea>
@@ -169,5 +169,13 @@ button:hover {
 }
 p{
     text-align: justify;
+}
+.formcont {
+  border-radius: 8px;
+  height: 50px;
+}
+.formtextarea{
+  border-radius: 8px;
+  height: 150px;
 }
 </style>

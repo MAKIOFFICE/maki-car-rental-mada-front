@@ -8,7 +8,7 @@
             <div class="divisionsear">
               <input
                 type="text"
-                class="form-control"
+                class="form-control formcont"
                 aria-label="Amount"
                 placeholder="Faite votre recherche ici"
                 v-model="searchQuery"
@@ -195,8 +195,9 @@ const handleClick = () => {
   justify-content: center;
   cursor: pointer;
 }
-.form-control {
-  background-color: #f5f5f5;
+.formcont {
+  border-radius: 8px;
+  height: 50px;
 }
 .search-title {
   font-size: 20px;
