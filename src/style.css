@@ -13,6 +13,8 @@ body {
   font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: #f5f5f5;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;

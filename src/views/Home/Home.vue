@@ -1,15 +1,15 @@
 <template>
   <div>
     <HomeHead />
-    <HomeIcon />
-    <Homegps/>
-    <HomeAvantage/>
-    <HomeTarif/>
-    <HomeLiv/>
-    <HomeSection />
-    <HomeMarque/>
-    <HommeTemoignage/>
-    <HomeTem/>
+    <HomeIcon data-aos="fade-left" />
+    <Homegps data-aos="fade-right"/>
+    <HomeAvantage data-aos="fade-left"/>
+    <HomeTarif data-aos="fade-right"/>
+    <HomeLiv data-aos="fade-left"/>
+    <HomeSection data-aos="fade-right" />
+    <HomeMarque data-aos="fade-left"/>
+    <HommeTemoignage data-aos="fade-right"/>
+    <HomeTem data-aos="fade-left"/>
   </div>
 </template>
 
@@ -24,6 +24,11 @@ import HomeTarif from './HomeTarif.vue'
 import HomeAvantage from './HomeAvantage.vue';
 import Homegps from './Homegps.vue';
 import HommeTemoignage from './HommeTemoignage.vue';
+
+AOS.init({
+        offset: 400,
+        duration: 1000,
+      });
 </script>
 
 <style lang='scss' scoped></style>
