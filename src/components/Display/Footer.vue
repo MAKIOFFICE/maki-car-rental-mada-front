@@ -139,6 +139,7 @@ const scrollToTop = () => {
 .footer {
   background-color: #333;
   padding: 20px 0px;
+  margin-top: 80px;
 }
 .divcont {
   padding: 10px 50px;

@@ -72,7 +72,7 @@
                 </div>
                 <div class="divtitle">
                   <h1>Lorem ipsum dolor sit amet.</h1>
-                  <p>Prix tout compris, aucun frais caché adipisicing elit. </p>
+                  <p>Prix tout compris, aucun frais caché adipisicing elit.</p>
                 </div>
               </div>
             </div>
@@ -102,11 +102,13 @@
 .divcont{
   // background-color: #74881c;
   padding: 20px 50px;
+  margin-top: 80px;
 }
 .listAv{
   background-color: #fff;
   padding: 10px 30px;
   border-radius: 15px;
+  height: 100%;
 }
 .btndiv{
   // background-color: coral;
@@ -125,5 +127,8 @@
 .divicn span{
   font-size: 3rem;
   color: #fdb714;
+}
+.row {
+  align-items: stretch;
 }
 </style>

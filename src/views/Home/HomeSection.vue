@@ -73,7 +73,7 @@ const ContactBtn = () => {
 
 <style lang="scss" scoped>
 .divcont {
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 10px 50px;
 }
 img {

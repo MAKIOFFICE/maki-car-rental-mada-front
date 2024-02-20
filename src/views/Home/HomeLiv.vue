@@ -2,8 +2,7 @@
   <div>
     <div class="container divcont">
       <div class="box">
-        <div class="bgimage"></div>
-        <div class="overlay">
+        <div class="bgimage">
           <div class="divliv">
             <h1>Livraison à l'hôtel dans Saint-Gilles-les-Bains !</h1>
             <p>
@@ -12,7 +11,10 @@
               liste, et de cliquer sur «Valider».
             </p>
             <div class="divform">
-              <select class="form-select selec" aria-label="Default select example">
+              <select
+                class="form-select selec"
+                aria-label="Default select example"
+              >
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -32,39 +34,23 @@
 <style lang="scss" scoped>
 .divcont {
   padding: 10px 50px;
+  margin-top: 80px;
 }
 .bgimage {
   background-image: url("https://img.freepik.com/free-vector/yellow-white-futuristic-3d-background_52683-34616.jpg?w=1380&t=st=1708332905~exp=1708333505~hmac=2ec411bf1cc1f94abfb8fd863a1f0f6cdbe9091c98f6cb422c2313ca0b8a4201");
-  height: 550px;
+  height: auto;
   width: 100%;
-  padding: 60px 0px;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   border-radius: 18px;
 }
-.box {
-  position: relative;
-  display: hidden;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.338);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-style: preserve-3d;
-  transition: all 500ms ease;
-  border-radius: 18px;
-}
+
 .divliv {
-  width: 60%;
-  margin: 20px auto;
+  width: 100%;
+  background-color: #00000091;
+  padding: 60px;
+  border-radius: 18px;
 }
 .divliv h1 {
   font-size: 52px;
@@ -79,9 +65,9 @@
   text-align: center;
   padding: 20px 10px;
 }
-.divform{
+.divform {
   margin: 0px auto;
-  width: 70%;
+  width: 50%;
   padding: 0px 20px;
 }
 .btnval,
@@ -90,78 +76,21 @@
   height: 50px;
   font-size: 16px;
 }
-.btnval{
+.btnval {
   background-color: rgb(32, 179, 32);
   border: none;
   margin-top: 20px;
   color: #fff;
 }
 /* Media query for small screens */
-@media screen and (max-width: 1286px) {
-  .divcont {
-  padding: 10px 50px;
-}
-}
-@media screen and (max-width: 991px) {
-  .divcont {
-  padding: 10px 0px;
-}
-.bgimage {
-  border-radius: 0px;
-}
-.overlay {
-  border-radius: 0px;
-}
-.divliv {
-  width: 80%;
-  margin: 20px auto;
-}
-}
-@media screen and (max-width: 556px) {
+@media screen and (max-width: 767px) {
   .divliv {
-  width: 95%;
-  margin: 20px auto;
+  padding: 50px 30px;
 }
-}
-@media screen and (max-width: 456px) {
-  .divliv {
-  width: 100%;
-  margin: 20px auto;
-}
-.divform{
+  .divform {
   margin: 0px auto;
-  width: 90%;
-  padding: 0px 10px;
+  width: 100%;
+  padding: 0px 0px;
 }
-}
-@media screen and (max-width: 442px) {
-  .bgimage {
-    height: 600px;
-  }
-}
-@media screen and (max-width: 316px) {
-  .bgimage {
-    height: 700px;
-  }
-}
-@media screen and (max-width: 276px) {
-  .bgimage {
-    height: 800px;
-  }
-}
-@media screen and (max-width: 252px) {
-  .bgimage {
-    height: 850px;
-  }
-}
-@media screen and (max-width: 215px) {
-  .bgimage {
-    height: 950px;
-  }
-}
-@media screen and (max-width: 175px) {
-  .bgimage {
-    height: 1050px;
-  }
 }
 </style>

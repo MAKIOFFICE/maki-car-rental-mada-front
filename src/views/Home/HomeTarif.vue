@@ -69,6 +69,7 @@ const voitureBtn = () => {
 .divcont{
   // background-color: #74881c;
   padding: 0px 50px;
+  margin-top: 80px;
 }
 .imagebox {
     width: 100%;
