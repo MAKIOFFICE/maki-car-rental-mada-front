@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="row">
-        <div class="col-md-4 mt-3">
+        <div class="col-md-4">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mt-3">
+        <div class="col-md-4">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mt-3">
+        <div class="col-md-4">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
@@ -92,7 +92,7 @@ const ContactBtn = () => {
 
 <style lang="scss" scoped>
 .divcont {
-  margin-top: 80px;
+  margin-top: 20px;
   padding: 10px 50px;
 }
 img {

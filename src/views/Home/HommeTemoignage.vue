@@ -319,7 +319,7 @@ const messageBtn = () => {
   border-radius: 50%;
 }
 .divsect {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .titletem {
   // background-color: red;
