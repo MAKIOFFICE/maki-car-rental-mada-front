@@ -177,6 +177,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  min-height: 90vh;
 }
 
 h1 {

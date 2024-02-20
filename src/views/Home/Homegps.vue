@@ -135,7 +135,7 @@
 .divparent{
   width: 100%;
   height: auto;
-  margin-top: 80px;
+  margin-top: 50px;
   padding-top: 20px;
   padding-bottom: 30px;
   background-color: #fff;

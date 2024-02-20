@@ -34,7 +34,7 @@
 <style lang="scss" scoped>
 .divcont {
   padding: 10px 50px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .bgimage {
   background-image: url("https://img.freepik.com/free-vector/yellow-white-futuristic-3d-background_52683-34616.jpg?w=1380&t=st=1708332905~exp=1708333505~hmac=2ec411bf1cc1f94abfb8fd863a1f0f6cdbe9091c98f6cb422c2313ca0b8a4201");
