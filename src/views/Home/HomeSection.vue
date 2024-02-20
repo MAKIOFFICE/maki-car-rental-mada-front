@@ -2,7 +2,7 @@
   <div>
     <div class="container divcont">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mt-3">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
@@ -19,7 +19,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mt-3">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mt-3">
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">

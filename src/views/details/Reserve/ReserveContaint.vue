@@ -528,8 +528,6 @@
             <div class="clearfixe text-center">
               <img
                 src="../../../assets/image/HomeImg/photos4.jpg"
-                width="203"
-                height="98"
               />
               <h5 class="h5name">name</h5>
               <small>AUTOMATIQUE</small>
@@ -763,7 +761,10 @@ watch(siegeBebe, (newValue) => {
   display: block;
   font-size: 13px;
 }
-
+.clearfixe img{
+  width: 208px;
+  height: auto;
+}
 /* toasts */
 .containToas {
   background-color: #6dace6;

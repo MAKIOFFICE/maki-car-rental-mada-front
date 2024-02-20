@@ -34,6 +34,5 @@ AOS.init({
 <style lang='scss' scoped>
 .divi{
   overflow: hidden;
-  overflow-x: hidden;
 }
 </style>
