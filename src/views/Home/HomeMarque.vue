@@ -88,7 +88,7 @@
 <style lang="scss" scoped>
 .divmarque{
     background-color: #fff;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 .divcont {
   // background-color: #74881c;

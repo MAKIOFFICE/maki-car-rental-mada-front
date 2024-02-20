@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="divi">
     <HomeHead />
     <HomeIcon data-aos="fade-left" />
     <Homegps data-aos="fade-right"/>
@@ -31,4 +31,9 @@ AOS.init({
       });
 </script>
 
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+.divi{
+  overflow: hidden;
+  overflow-x: hidden;
+}
+</style>

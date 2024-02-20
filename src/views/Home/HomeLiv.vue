@@ -1,39 +1,24 @@
 <template>
   <div>
-    <div class="divisionliv mb-2">
-      <div class="container divcont mt-5">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="text-white">
-              <img src="../../assets/image/HomeImg/maki.jpg" class="imgmakiU" />
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="text-white pt-5">
-              <h1 class="h1hot">
-                Livraison à l'hôtel dans Saint-Gilles-les-Bains !
-              </h1>
-              <p class="p1hot">
-                Nous pouvons livrer votre voiture de location directement à
-                votre hôtel. Il vous suffit donc de sélectionner votre hôtel
-                dans cette liste, et de cliquer sur «Valider».
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-white pt-5">
-              <div class="divisionseardate">
-                <select class="selec form-select form-select-lg formcont">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <span class="spandate"
-                  ><i class="bi bi-caret-down-fill"></i
-                ></span>
-              </div>
-              <button class="validatebtn mb-3">VALIDER</button>
+    <div class="divcont">
+      <div class="box">
+        <div class="bgimage"></div>
+        <div class="overlay">
+          <div class="divliv">
+            <h1>Livraison à l'hôtel dans Saint-Gilles-les-Bains !</h1>
+            <p>
+              Nous pouvons livrer votre voiture de location directement à votre
+              hôtel. Il vous suffit donc de sélectionner votre hôtel dans cette
+              liste, et de cliquer sur «Valider».
+            </p>
+            <div class="divform">
+              <select class="form-select selec" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <button class="btnval">VALIDER</button>
             </div>
           </div>
         </div>
@@ -45,69 +30,138 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.divcont{
-  // background-color: #74881c;
-  padding: 0px 50px;
+.divcont {
+  padding: 10px 160px;
 }
-.divisionliv {
+.bgimage {
+  background-image: url("https://img.freepik.com/free-vector/yellow-white-futuristic-3d-background_52683-34616.jpg?w=1380&t=st=1708332905~exp=1708333505~hmac=2ec411bf1cc1f94abfb8fd863a1f0f6cdbe9091c98f6cb422c2313ca0b8a4201");
+  height: 550px;
   width: 100%;
-  /* background-color: #175289; */
-  background-color: rgb(58, 31, 4);
+  padding: 60px 0px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  border-radius: 18px;
 }
-.h1hot {
-  font-size: 2em;
-}
-
-.p1hot {
-  font-size: 14px;
-}
-.divisionseardate {
+.box {
   position: relative;
-  margin: 15px 0px;
-  top: -15px;
-  bottom: 0px;
+  display: hidden;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.338);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: all 500ms ease;
+  border-radius: 18px;
+}
+.divliv {
+  width: 60%;
+  margin: 20px auto;
+}
+.divliv h1 {
+  font-size: 52px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 10px;
+}
+.divliv p {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 10px;
+}
+.divform{
+  margin: 0px auto;
+  width: 70%;
+  padding: 0px 20px;
+}
+.btnval,
 .selec {
   width: 100%;
   height: 50px;
   font-size: 16px;
 }
-.spandate {
-  font-size: 1.2rem;
-  position: absolute;
-  z-index: 5;
-  top: 0;
-  left: 85%;
-  width: 15%;
-  height: 100%;
-  // background-color: #fdb714;
-  // border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fdb714;
-}
-
-.formcont::-webkit-calendar-picker-indicator {
-  position: relative;
-  z-index: 20;
-  cursor: pointer;
-  opacity: 0;
-}
-
-h5 span {
-  height: 50px;
-}
-.validatebtn {
-  width: 100%;
-  height: 50px;
-  border: none;
+.btnval{
   background-color: rgb(32, 179, 32);
+  border: none;
+  margin-top: 20px;
   color: #fff;
 }
-
-img {
+/* Media query for small screens */
+@media screen and (max-width: 1286px) {
+  .divcont {
+  padding: 10px 100px;
+}
+}
+@media screen and (max-width: 991px) {
+  .divcont {
+  padding: 10px 0px;
+}
+.bgimage {
+  border-radius: 0px;
+}
+.overlay {
+  border-radius: 0px;
+}
+.divliv {
+  width: 80%;
+  margin: 20px auto;
+}
+}
+@media screen and (max-width: 556px) {
+  .divliv {
+  width: 95%;
+  margin: 20px auto;
+}
+}
+@media screen and (max-width: 456px) {
+  .divliv {
   width: 100%;
-  height: 100%;
+  margin: 20px auto;
+}
+.divform{
+  margin: 0px auto;
+  width: 90%;
+  padding: 0px 10px;
+}
+}
+@media screen and (max-width: 442px) {
+  .bgimage {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 316px) {
+  .bgimage {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 276px) {
+  .bgimage {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 252px) {
+  .bgimage {
+    height: 850px;
+  }
+}
+@media screen and (max-width: 215px) {
+  .bgimage {
+    height: 950px;
+  }
+}
+@media screen and (max-width: 175px) {
+  .bgimage {
+    height: 1050px;
+  }
 }
 </style>
