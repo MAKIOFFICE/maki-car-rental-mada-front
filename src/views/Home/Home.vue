@@ -3,8 +3,8 @@
     <HomeHead />
     <HomeIcon data-aos="fade-left" />
     <HomeSection data-aos="fade-right" />
-    <Homegps data-aos="fade-left"/>
-    <HomeAvantage data-aos="fade-right"/>
+    <HomeAvantage data-aos="fade-left"/>
+    <Homegps data-aos="fade-right"/>
     <HomeTarif data-aos="fade-left"/>
     <HomeLiv data-aos="fade-right"/>
     <HomeTem data-aos="fade-left"/>

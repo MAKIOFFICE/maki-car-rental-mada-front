@@ -3,10 +3,26 @@
     <div class="container divcont">
       <div class="head">
         <div class="btndiv">
-          <h1>Encore plus d'avantages</h1>
+          <h1>Les plus de notre service</h1>
         </div>
         <div class="container mt-4">
           <div class="row">
+            <div class="col-md-4 p-2">
+              <div class="listAv">
+                <div class="divicn">
+                  <span>
+                    <img :src="icone7" alt="icon" />
+                  </span>
+                </div>
+                <div class="divtitle">
+                  <h1>GPS gratuit</h1>
+                  <p>
+                    GPS offert gratuitement pour toute location de voiture
+                    effectué sur notre site.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div class="col-md-4 p-2">
               <div class="listAv">
                 <div class="divicn">
@@ -39,7 +55,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 p-2">
+            <!-- <div class="col-md-4 p-2">
               <div class="listAv">
                 <div class="divicn">
                   <span>
@@ -53,7 +69,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-md-4 p-2">
@@ -79,8 +95,8 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Transparence Totale </h1>
-                  <p>Prix tout compris, aucun frais caché adipisicing elit.</p>
+                  <h1>Transparence Totale</h1>
+                  <p>Prix tout compris, aucun frais caché.</p>
                 </div>
               </div>
             </div>
@@ -88,17 +104,32 @@
               <div class="listAv">
                 <div class="divicn">
                   <span>
-                    <img :src="icone7" alt="icon" />
+                    <img :src="icone4" alt="icon" />
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Lorem ipsum dolor</h1>
+                  <h1>Exclusivité et Excellence</h1>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Uniquement des voitures récentes et de très bonne qualité
                   </p>
                 </div>
               </div>
             </div>
+            <!-- <div class="col-md-4 p-2">
+              <div class="listAv">
+                <div class="divicn">
+                  <span>
+                    <img :src="icone7" alt="icon" />
+                  </span>
+                </div>
+                <div class="divtitle">
+                  <h1>GPS gratuit</h1>
+                  <p>
+                    GPS offert gratuitement pour toute location de voiture effectué sur notre site.
+                  </p>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -141,7 +172,7 @@ import icone7 from "../../assets/icons/Frame7.svg";
   font-size: 25px;
   padding: 5px 0px;
 }
-img{
+img {
   width: 100px;
 }
 .row {
