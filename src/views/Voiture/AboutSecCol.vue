@@ -58,14 +58,14 @@
                     <div class="carousel-item active">
                       <img
                         class="modImage"
-                        src="../../assets/image/HomeImg/photos4.jpg"
+                        src="../../assets/image/HomeImg/photos4.png"
                         alt="image"
                       />
                     </div>
                     <div class="carousel-item">
                       <img
                         class="modImage"
-                        src="../../assets/image/HomeImg/photos3.jpg"
+                        src="../../assets/image/HomeImg/photos3.png"
                         alt="image"
                       />
                     </div>
@@ -79,7 +79,7 @@
                     <div class="carousel-item">
                       <img
                         class="modImage"
-                        src="../../assets/image/HomeImg/photos1.jpg"
+                        src="../../assets/image/HomeImg/photos1.png"
                         alt="image"
                       />
                     </div>
@@ -264,10 +264,10 @@
 import { useRouter } from "vue-router";
 import { ref } from "vue";
 
-import UrlImgOne from "../../assets/image/HomeImg/photos1.jpg";
+import UrlImgOne from "../../assets/image/HomeImg/photos1.png";
 import UrlImgTwo from "../../assets/image/HomeImg/photos2.webp";
-import UrlImgThree from "../../assets/image/HomeImg/photos3.jpg";
-import UrlImgfor from "../../assets/image/HomeImg/photos4.jpg";
+import UrlImgThree from "../../assets/image/HomeImg/photos3.png";
+import UrlImgfor from "../../assets/image/HomeImg/photos4.png";
 
 const dataAuto = [
   {
@@ -359,7 +359,7 @@ const reserveBtn = () => {
 .modImage {
   width: 100%;
   height: auto;
-  background-color: #899e27;
+  // background-color: #899e27;
   text-align: center;
 }
 

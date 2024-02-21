@@ -26,10 +26,10 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import UrlImgOne from '../../assets/image/HomeImg/photos1.jpg';
+import UrlImgOne from '../../assets/image/HomeImg/photos1.png';
 import UrlImgTwo from '../../assets/image/HomeImg/photos2.webp';
-import UrlImgThree from '../../assets/image/HomeImg/photos3.jpg';
-import UrlImgfor from '../../assets/image/HomeImg/photos4.jpg';
+import UrlImgThree from '../../assets/image/HomeImg/photos3.png';
+import UrlImgfor from '../../assets/image/HomeImg/photos4.png';
 
 const dataAuto =[
     {

@@ -101,7 +101,6 @@
 .custom-column {
   padding: 10px;
   border-radius: 10px;
-  // background-color: #f5f5f5;
   margin: 0px;
   height: 110px;
 }
@@ -145,7 +144,6 @@ label {
   padding: 40px 10px;
   border-radius: 10px;
   height: 110px;
-  // background-color: red;
   margin: 0px;
 }
 .custom-btn button {
