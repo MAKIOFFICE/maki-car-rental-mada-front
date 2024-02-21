@@ -59,11 +59,14 @@
   // padding-top: 50px;
   // background-color: #f5f5f5;
 }
-
+.row {
+  align-items: stretch;
+}
 .stepBox {
   background: #2b2a2a;
   padding: 18px 12px;
   border-radius: 12px;
+  height: 100%;
   p {
     color: #fff;
     font-weight: 500;

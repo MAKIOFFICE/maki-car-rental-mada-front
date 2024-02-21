@@ -1,181 +1,143 @@
 <template>
-  <div class="divparent">
-    <div class="container divcont mt-4">
-      <div class="row gpsoffert">
-        <div class="col-md-6 imagegps">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
+  <div>
+    <div class="container divcont">
+      <div class="divicol">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la première colonne -->
+                  <h2>Avantages</h2>
+                  <p>
+                    Aux Madagascar, toutes les locations de voitures effectuées
+                    via notre site incluent un GPS gratuit. Cette inclusion
+                    offre aux voyageurs un avantage pratique pour explorer l'île
+                    en toute facilité.
+                  </p>
+                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                </div>
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la deuxième colonne -->
+                  <div>
+                    <img :src="Gps1" alt="gps" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la première colonne -->
+                  <h2>Conseils locaux</h2>
+                  <p>
+                    Malgré les avis de certains locaux et habitués affirmant
+                    qu'un GPS n'est pas nécessaire aux Madagascar, il peut
+                    néanmoins s'avérer précieux, en particulier pour les
+                    nouveaux visiteurs.
+                  </p>
+                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                </div>
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la deuxième colonne -->
+                  <div>
+                    <img :src="Gps2" alt="gps" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la première colonne -->
+                  <h2>Utilité du GPS</h2>
+                  <p>
+                    Pour ceux découvrant l'île pour la première fois, un GPS
+                    peut se révéler particulièrement utile. En effet, lors de
+                    votre arrivée, avoir un moyen fiable de navigation peut
+                    simplifier le trajet de l'aéroport à votre lieu de séjour.
+                  </p>
+                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                </div>
+                <div class="col-md-6 colonne1">
+                  <!-- Contenu de la deuxième colonne -->
+                  <div>
+                    <img :src="Gps3" alt="gps" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
           >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active btnrondstyle"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                class="btnrondstyle"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                class="btnrondstyle"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-              <button
-                class="btnrondstyle"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="3"
-                aria-label="Slide 4"
-              ></button>
-              <button
-                class="btnrondstyle"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="4"
-                aria-label="Slide 5"
-              ></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="https://d12ittivwictyd.cloudfront.net/images/gps/9fr1.jpg"
-                  class="img-fluid"
-                  alt="GPS Image"
-                  draggable="false"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr2.jpg"
-                  draggable="false"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr3.jpg"
-                  draggable="false"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr4.jpg"
-                  draggable="false"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://d12ittivwictyd.cloudfront.net/images/gps/1fr5.jpg"
-                  draggable="false"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 parOffert">
-          <h1 class="mb-4">GPS offert pour toute location de voiture</h1>
-          <div>
-            <h5 class="d-flex">
-              <span class="spanicn"><i class="bi bi-hand-thumbs-up"></i></span
-              ><span class="spantitle"
-                >Avantages des locations de voitures a Madagascar</span
-              >
-            </h5>
-            <p class="paramavtg">
-              Aux Madagascar, toutes les locations de voitures effectuées via
-              notre site incluent un GPS gratuit. Cette inclusion offre aux
-              voyageurs un avantage pratique pour explorer l'île en toute
-              facilité.
-            </p>
-          </div>
-          <div>
-            <h5 class="d-flex">
-              <span class="spanicn"><i class="bi bi-gear-fill"></i></span
-              ><span class="spantitle"
-                >Conseils locaux sur l'utilisation du GPS</span
-              >
-            </h5>
-            <p class="paramavtg">
-              Malgré les avis de certains locaux et habitués affirmant qu'un GPS n'est pas nécessaire aux Madagascar, il peut néanmoins s'avérer précieux, en particulier pour les nouveaux visiteurs.
-            </p>
-          </div>
-          <div>
-            <h5 class="d-flex">
-              <span class="spanicn"><i class="bi bi-wallet2"></i></span
-              ><span class="spantitle"
-                >Utilité du GPS pour les nouveaux arrivants</span
-              >
-            </h5>
-            <p class="paramavtg">
-              Pour ceux découvrant l'île pour la première fois, un GPS peut se révéler particulièrement utile. En effet, lors de votre arrivée, avoir un moyen fiable de navigation peut simplifier le trajet de l'aéroport à votre lieu de séjour.
-            </p>
-          </div>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Gps1 from "../../assets/image/gps/gps1.jpg";
+import Gps2 from "../../assets/image/gps/gps2.jpg";
+import Gps3 from "../../assets/image/gps/gps3.jpg";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const VoitureBtn = () => {
+  router.push("/about");
+};
+</script>
 
 <style lang="scss" scoped>
-.divcont{
-  // background-color: #74881c;
-  padding: 20px 50px;
-}
-.divparent{
-  width: 100%;
-  height: auto;
+.divcont {
+  padding: 10px 50px;
   margin-top: 50px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  background-color: #fff;
 }
-
-.parOffert{
-  padding: 0px 20px;
-  // background-color: #fdb714;
-  // padding-left: 60px;
-}
-.parOffert h1 {
+.divicol {
+  background-color: #f5f5f5;
   // background-color: red;
-  font-size: 30px;
+  border-radius: 18px;
 }
-.spanicn {
-  // background-color: blue;
-  font-size: 1.5rem;
-  padding: 5px 8px;
-  color: #fdb714;
-}
-.spantitle {
+.colonne1 {
   // background-color: aqua;
-  padding: 5px;
+  padding: 50px 50px;
 }
-.paramavtg {
-  // background-color: red;
-  padding-left: 48px;
+h2 {
+  font-size: 25px;
+}
+p {
   text-align: justify;
+  margin-top: 15px;
 }
-.carousel-item img{
-  width: 100%;
-  height: auto;
+.button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #6fabdd;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
 }
-.btnrondstyle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #333;
-}
-.active {
-    background-color: #fdb714;
+img {
+  width: 80%;
 }
 </style>

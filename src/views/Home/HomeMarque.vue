@@ -89,6 +89,7 @@
 .divmarque{
     background-color: #fff;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .divcont {
   // background-color: #74881c;
