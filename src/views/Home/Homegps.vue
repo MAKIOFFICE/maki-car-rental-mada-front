@@ -21,7 +21,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne">
+                <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps1" alt="gps" />
@@ -42,7 +42,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne">
+                <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps2" alt="gps" />
@@ -63,7 +63,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne">
+                <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps3" alt="gps" />
@@ -119,14 +119,12 @@ const VoitureBtn = () => {
   border-radius: 18px;
 }
 .colonne1 {
-  // background-color: aqua;
-  // padding: 50px 50px;
-  padding: 50px 20px 50px 120px; /* top right bottom left */
+  padding: 40px 40px;
 }
-.colonne{
-  // background-color: red;
-  padding: 50px 100px 50px 20px; /* top right bottom left */
-
+.row{
+  width: 80%;
+  margin: 0 auto;
+  background-color: red;
 }
 h2 {
   font-size: 25px;
@@ -144,6 +142,6 @@ p {
   margin-top: 20px;
 }
 img {
-  width: 80%;
+  width: 90%;
 }
 </style>
