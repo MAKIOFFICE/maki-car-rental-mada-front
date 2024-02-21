@@ -167,4 +167,9 @@ const toggleIconNext = (buttonNumber) => {
     font-size: 1.5rem;
     color: #4995dd;
 }
+@media only screen and (max-width: 573px) {
+  .divcont {
+  padding: 20px;
+}
+}
 </style>

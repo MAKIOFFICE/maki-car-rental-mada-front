@@ -124,7 +124,6 @@ const VoitureBtn = () => {
 .row{
   width: 80%;
   margin: 0 auto;
-  background-color: red;
 }
 h2 {
   font-size: 25px;
@@ -143,5 +142,14 @@ p {
 }
 img {
   width: 90%;
+}
+@media only screen and (max-width: 573px) {
+  .divcont {
+  padding: 20px;
+}
+.carousel-control-next,
+.carousel-control-prev{
+  display: none;
+}
 }
 </style>

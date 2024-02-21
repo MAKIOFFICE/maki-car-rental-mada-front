@@ -527,7 +527,7 @@
             <h2 class="Votres">Votre réservation</h2>
             <div class="clearfixe text-center">
               <img
-                src="../../../assets/image/HomeImg/photos4.jpg"
+                src="../../../assets/image/HomeImg/photos4.png"
               />
               <h5 class="h5name">name</h5>
               <small>AUTOMATIQUE</small>

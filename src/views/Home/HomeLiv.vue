@@ -94,4 +94,12 @@
   padding: 0px 0px;
 }
 }
+@media only screen and (max-width: 573px) {
+  .divliv h1{
+    font-size: 35px;
+  }
+  .divcont {
+  padding: 20px;
+}
+}
 </style>
