@@ -124,6 +124,7 @@ const VoitureBtn = () => {
 .row{
   width: 80%;
   margin: 0 auto;
+  background-color: red;
 }
 h2 {
   font-size: 25px;
