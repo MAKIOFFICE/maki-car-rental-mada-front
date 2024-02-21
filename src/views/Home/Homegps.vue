@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
-                  <div>
+                  <div class="text-center">
                     <img :src="Gps1" alt="gps" />
                   </div>
                 </div>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
-                  <div>
+                  <div class="text-center">
                     <img :src="Gps2" alt="gps" />
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
-                  <div>
+                  <div class="text-center">
                     <img :src="Gps3" alt="gps" />
                   </div>
                 </div>
