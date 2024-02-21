@@ -147,4 +147,9 @@ img{
 .row {
   align-items: stretch;
 }
+@media only screen and (max-width: 573px) {
+  .divcont {
+  padding: 10px;
+}
+}
 </style>

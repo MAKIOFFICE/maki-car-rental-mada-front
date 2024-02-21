@@ -151,4 +151,9 @@ img {
   text-align: center;
   font-size: 20px;
 }
+@media only screen and (max-width: 573px) {
+  .divcont {
+  padding: 10px;
+}
+}
 </style>

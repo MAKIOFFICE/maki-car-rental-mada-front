@@ -94,4 +94,9 @@
   padding: 0px 0px;
 }
 }
+@media only screen and (max-width: 573px) {
+  .divcont {
+  padding: 10px;
+}
+}
 </style>
