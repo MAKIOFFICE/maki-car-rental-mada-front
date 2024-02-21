@@ -108,7 +108,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               <div class="ms-auto">
-                <button class="button">Afficher les offres ⇨</button>
+                <button class="button" @click="VoitureBtn">Afficher les offres ⇨</button>
               </div>
             </div>
           </div>
@@ -164,7 +164,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const VoitureBtn = () => {
+  router.push("/about");
+};
+</script>
 
 <style scoped>
 .divcont {
