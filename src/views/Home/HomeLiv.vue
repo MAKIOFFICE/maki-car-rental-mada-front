@@ -77,6 +77,7 @@
   font-size: 16px;
 }
 .btnval {
+  // background-color: #8da044;
   background-color: rgb(32, 179, 32);
   border: none;
   margin-top: 20px;

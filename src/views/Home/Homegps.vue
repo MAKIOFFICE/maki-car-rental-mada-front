@@ -97,9 +97,9 @@
 </template>
 
 <script setup>
-import Gps1 from "../../assets/image/gps/gps1.jpg";
-import Gps2 from "../../assets/image/gps/gps2.jpg";
-import Gps3 from "../../assets/image/gps/gps3.jpg";
+import Gps1 from "../../assets/image/gps/1.png";
+import Gps2 from "../../assets/image/gps/2.png";
+import Gps3 from "../../assets/image/gps/3.png";
 import { useRouter } from "vue-router";
 
 const router = useRouter();

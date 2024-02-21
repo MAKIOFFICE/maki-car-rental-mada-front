@@ -124,7 +124,7 @@ img {
 .colorname button {
   border: none;
   font-weight: 600;
-  color: blueviolet;
+  color: #6fabdd;
   background-color: #fff;
 }
 .image {
