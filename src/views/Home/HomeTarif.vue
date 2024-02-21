@@ -69,11 +69,11 @@ const voitureBtn = () => {
 .divcont{
   // background-color: #74881c;
   padding: 0px 50px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .imagebox {
     width: 100%;
-    height: 180px;
+    height: auto;
 }
 
 .box:hover .imagebox {
@@ -86,6 +86,7 @@ const voitureBtn = () => {
 
 .cardOn {
     background-color: #fff;
+    height: 100%;
 }
 .overlay {
     position: absolute;
@@ -116,5 +117,7 @@ const voitureBtn = () => {
     padding: 20px 0px;
     font-size: 20px;
 }
-
+.row {
+  align-items: stretch;
+}
 </style>

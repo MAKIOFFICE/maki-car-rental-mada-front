@@ -413,12 +413,14 @@ const reserveBtn = () => {
 }
 
 .btnpric {
-  width: 100%;
-  height: 40px;
+  // width: 100%;
+  // height: 40px;
+  padding: 10px 8px;
   background-color: #899e27;
   border: none;
   color: #fff;
   border-radius: 20px;
+  // padding: 5px;
   /* margin-top: 5px; */
 }
 
@@ -482,7 +484,7 @@ const reserveBtn = () => {
 }
 
 .img-title {
-  width: 250%;
+  width: 300%;
   position: absolute;
   top: -110%;
   left: 50%;
@@ -504,5 +506,45 @@ const reserveBtn = () => {
 }
 .spnicons {
   font-size: 3rem;
+}
+@media only screen and (max-width: 1169px) {
+  .divipric {
+  // background-color: red;
+  width: 100%;
+  margin-left: 0px;
+}
+.img-title {
+  width: 200%;
+}
+}
+@media only screen and (max-width: 985px) {
+.img-title {
+  width: 350%;
+}
+}
+@media only screen and (max-width: 766px) {
+.img-title {
+  width: 100%;
+}
+}
+@media only screen and (max-width: 539px) {
+.img-title {
+  width: 110%;
+}
+}
+@media only screen and (max-width: 459px) {
+.img-title {
+  width: 150%;
+}
+}
+@media only screen and (max-width: 374px) {
+.img-title {
+  width: 250%;
+}
+}
+@media only screen and (max-width: 342px) {
+.img-title {
+  width: 250%;
+}
 }
 </style>
