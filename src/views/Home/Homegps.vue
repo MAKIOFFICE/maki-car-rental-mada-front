@@ -147,5 +147,9 @@ img {
   .divcont {
   padding: 20px;
 }
+.carousel-control-next,
+.carousel-control-prev{
+  display: none;
+}
 }
 </style>
