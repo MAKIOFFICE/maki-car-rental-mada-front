@@ -21,7 +21,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne1">
+                <div class="col-md-6 colonne">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps1" alt="gps" />
@@ -42,7 +42,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne1">
+                <div class="col-md-6 colonne">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps2" alt="gps" />
@@ -63,7 +63,7 @@
                   </p>
                   <button class="button" @click="VoitureBtn">Réserver maintenant</button>
                 </div>
-                <div class="col-md-6 colonne1">
+                <div class="col-md-6 colonne">
                   <!-- Contenu de la deuxième colonne -->
                   <div class="text-center">
                     <img :src="Gps3" alt="gps" />
@@ -111,7 +111,7 @@ const VoitureBtn = () => {
 <style lang="scss" scoped>
 .divcont {
   padding: 10px 50px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .divicol {
   background-color: #f5f5f5;
@@ -120,7 +120,13 @@ const VoitureBtn = () => {
 }
 .colonne1 {
   // background-color: aqua;
-  padding: 50px 50px;
+  // padding: 50px 50px;
+  padding: 50px 20px 50px 120px; /* top right bottom left */
+}
+.colonne{
+  // background-color: red;
+  padding: 50px 100px 50px 20px; /* top right bottom left */
+
 }
 h2 {
   font-size: 25px;

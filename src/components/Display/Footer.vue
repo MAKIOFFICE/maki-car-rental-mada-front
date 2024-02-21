@@ -68,11 +68,11 @@
         <div class="col-md-3">
           <h5>MENU</h5>
           <ul class="ulident">
-            <li><a href="#">LOCATION DE VOITURES A MADAGASCAR</a></li>
-            <li><a href="#">VOITURES ET TARIFS</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">CGV ET MENTIONS LEGALES</a></li>
-            <li><a href="#">CONTACTEZ-NOUS</a></li>
+            <li><a class="topage" @click="locationbtn">LOCATION DE VOITURES A MADAGASCAR</a></li>
+            <li><a class="topage" @click="handleBtn">VOITURES ET TARIFS</a></li>
+            <li><a class="topage" @click="faqBtn">FAQ</a></li>
+            <li><a class="topage" @click="cvgBtn">CGV ET MENTIONS LEGALES</a></li>
+            <li><a class="topage" @click="contactBtn">CONTACTEZ-NOUS</a></li>
           </ul>
         </div>
 
@@ -133,6 +133,25 @@ const scrollToTop = () => {
     behavior: "smooth",
   });
 };
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const locationbtn = () => {
+  router.push('/');
+}
+const handleBtn = async () => {
+  router.push('/about');
+}
+const faqBtn = () => {
+  router.push('/faq');
+}
+const cvgBtn = () => {
+  router.push('/cvg');
+}
+const contactBtn = () => {
+  router.push('/contact');
+}
 </script>
 
 <style lang="scss" scoped>
@@ -182,6 +201,9 @@ li {
 }
 a {
   color: #f5f5f5;
+}
+.topage{
+  cursor: pointer;
 }
 h5 {
   color: #fff;

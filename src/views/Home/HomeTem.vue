@@ -124,7 +124,7 @@ const toggleIconNext = (buttonNumber) => {
 .divmes {
 //   background: blue;
   padding: 50px 0px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .divcont {
 //   background-color: #74881c;

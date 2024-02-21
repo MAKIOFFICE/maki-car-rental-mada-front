@@ -119,7 +119,7 @@ import icone7 from "../../assets/icons/Frame7.svg";
 .divcont {
   // background-color: #74881c;
   padding: 20px 50px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .listAv {
   background-color: #fff;
