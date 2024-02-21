@@ -152,8 +152,11 @@ img {
   font-size: 20px;
 }
 @media only screen and (max-width: 573px) {
+  .title{
+    text-align: center;
+  }
   .divcont {
-  padding: 10px;
+  padding: 20px;
 }
 }
 </style>
