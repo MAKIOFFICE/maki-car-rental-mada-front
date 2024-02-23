@@ -9,6 +9,11 @@ import Reserve from '../views/details/Reserve/Reserve.vue'
 import Franchise from '../views/details/Franchise/Franchise.vue'
 
 import Animate from '../components/Display/foot.vue'
+import login from '../views/Admin/login.vue'
+
+import AddCar from '../views/Admin/AddCar.vue'
+
+
 
 import NotFound from '../NotFound.vue';
 
@@ -57,6 +62,16 @@ const routes = [
         path: '/animate',
         name: 'Animate',
         component: Animate
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: login
+    },
+    {
+        path: '/AddCar',
+        name: 'AddCar',
+        component: AddCar
     },
     { path: '/:catchAll(.*)', component: NotFound }
 ]

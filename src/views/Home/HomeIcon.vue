@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container head">
+    <div class="container divcont">
       <div class="row g-3">
         <!-- one -->
         <div class="col-md-2 col-sm-4">
@@ -54,7 +54,8 @@
 </template>
 <script setup></script>
 <style lang="scss" scoped>
-.head {
+.divcont {
+  // padding: 10px 50px;
   margin-top: 80px;
 }
 .row {
