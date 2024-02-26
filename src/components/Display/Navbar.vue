@@ -27,6 +27,9 @@
             <li class="nav-item">
               <a class="nav-link" @click="contactBtn">{{ $t("contact") }}</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" @click="adminBtn">Admin</a>
+            </li>
           </ul>
         </div>
         <!-- <Dropdown>
@@ -63,6 +66,9 @@ const cvgBtn = () => {
 }
 const contactBtn = () => {
   router.push('/contact');
+}
+const adminBtn = () => {
+  router.push('/login');
 }
 </script>
   

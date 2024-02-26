@@ -26,7 +26,7 @@
                 required
               />
             </div>
-            <button type="submit" class="btn btn-primary btn-block w-100 mt-3">
+            <button type="submit" class="btn btn-primary btn-block w-100 mt-3" @click="backofficeBtn">
               Se connecter
             </button>
           </form>
@@ -36,7 +36,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const backofficeBtn = () => {
+  router.push('/AddCar');
+}
+</script>
 
 <style scoped>
 .login-container {
