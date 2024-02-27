@@ -61,7 +61,7 @@ export const data = [
       },
       {
         label: "4 motrices",
-        value: "4x4 ",
+        value: "4x4",
       },
     ],
     required: false,
