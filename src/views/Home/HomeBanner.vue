@@ -159,9 +159,13 @@
 <script setup>
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import { useToast } from "vue-toastification";
+import { useStore } from "vuex";
 
 const router = useRouter();
+const store = useStore();
 const params = ref({});
+const toast = useToast();
 
 function handleChange(value) {
   console.log("value input", value.target.value);
@@ -173,7 +177,7 @@ function handleChange(value) {
 }
 const VoitureBtn = () => {
   try {
-    this.$store.commit("setSearch", params.value);
+    store.commit("setSearch", params.value);
   } catch (error) {
     console.error(error);
   } finally {
@@ -181,6 +185,20 @@ const VoitureBtn = () => {
       console.log(store.state.search);
       router.push("/about");
     } else {
+      toast.error("Il y a une erreur !", {
+        position: "top-right",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: true,
+        rtl: false,
+      });
     }
   }
 };
