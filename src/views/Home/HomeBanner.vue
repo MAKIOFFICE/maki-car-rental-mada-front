@@ -158,21 +158,31 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 
 const router = useRouter();
-const params = ref({})
+const params = ref({});
 
 function handleChange(value) {
   console.log("value input", value.target.value);
   const inputValue = value.target.value;
   params.value = {
     ...params.value,
-    inputValue
-  }
+    inputValue,
+  };
 }
 const VoitureBtn = () => {
-  this.$store.commit('setSearch', params.value);
-  // router.push("/about");
+  try {
+    this.$store.commit("setSearch", params.value);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    if (store.state.search) {
+      console.log(store.state.search);
+      router.push("/about");
+    } else {
+    }
+  }
 };
 </script>
 
