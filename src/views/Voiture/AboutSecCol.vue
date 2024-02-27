@@ -111,9 +111,13 @@
         </div>
         <!-- modal fin -->
         <!-- debut 1 -->
+        <div v-if="!dataAvailableCarByPlace || !dataAvailableCarByPlace.length">
+          Tsisy data
+        </div>
         <div
+          v-else
           class="container coloCont"
-          v-for="(item, index) in dataAuto"
+          v-for="(item, index) in dataAvailableCarByPlace"
           :key="index"
         >
           <div class="row">
@@ -124,7 +128,7 @@
             <div class="col-md-3 col-sm-6">
               <div>
                 <div class="divImg">
-                  <img :src="item.image" />
+                  <img :src="item.symbol[0].url" />
                   <span class="spaniconcam">
                     <i
                       class="bi bi-camera-fill icncam"
@@ -141,9 +145,9 @@
                 <h6 class="h6Img">{{ item.name }}</h6>
                 <div class="ulIm">
                   <div class="liImg liliIm">BOÎTE DE VITESSE</div>
-                  <div class="liImg">{{ item.vitesse }}</div>
+                  <div class="liImg">{{ item.gearbox }}</div>
                   <div class="liImg liliIm">PUISSANCE DU MOTEUR</div>
-                  <div class="liImg">{{ item.motor }}</div>
+                  <div class="liImg">{{ item.power }}</div>
                   <div class="liImg liliIm">ÂGE MINIMUM</div>
                   <div class="liImg">21 ANS</div>
                   <div class="liImg">PERMIS D'AU MOINS UN AN</div>
@@ -160,35 +164,42 @@
                       <span class="span" title="Nombres de places assises"
                         ><i class="bi bi-clipboard-fill"></i
                       ></span>
-                      <p class="para">4</p>
+                      <p class="para">{{ item.seat }}</p>
                     </div>
                     <div class="col-md-2 col-sm-4 text-center divisp">
                       <span class="span" title="Volume du coffre"
                         ><i class="bi bi-suitcase-lg"></i
                       ></span>
-                      <p class="para">1</p>
+                      <p class="para">{{ item.boot }}</p>
                     </div>
                     <div class="col-md-2 col-sm-4 text-center divisp">
                       <span class="span" title="Nombre de porte"
                         ><i class="bi bi-car-front"></i
                       ></span>
-                      <p class="para">4</p>
+                      <p class="para">{{ item.door }}</p>
                     </div>
                     <div class="col-md-2 col-sm-4 text-center divisp">
                       <span class="span" title="Climatisation"
                         ><i class="bi bi-fan"></i
                       ></span>
-                      <p class="para">AC</p>
+                      <p class="para">{{ item.air_conditioner }}</p>
                     </div>
                     <div class="col-md-2 col-sm-4 text-center divisp">
                       <span class="span" title="Radio avec lecteur MP3"
                         ><i class="bi bi-music-note-beamed"></i
                       ></span>
-                      <p class="para">MP3</p>
+                      <p class="para">{{ item.radio }}</p>
                     </div>
                     <div class="col-sm-12 divipric img-container">
-                      <p class="ppric">5 JOURS</p>
-                      <h1 class="h1pric">{{ item.price }}</h1>
+                      <h1 v-if="!daysDifference" class="h1pric">
+                        {{ item.price }} $ /jour
+                      </h1>
+                      <p v-if="daysDifference" class="ppric">
+                        {{ daysDifference + " " }} JOURS
+                      </p>
+                      <h1 v-if="daysDifference" class="h1pric">
+                        {{ item.price * daysDifference }} $
+                      </h1>
 
                       <!-- span hover deb-->
 
@@ -262,13 +273,15 @@
 
 <script setup>
 import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { useStore } from "vuex";
+import { ref, onMounted, watch } from "vue";
 
 import UrlImgOne from "../../assets/image/HomeImg/photos1.png";
 import UrlImgTwo from "../../assets/image/HomeImg/photos2.webp";
 import UrlImgThree from "../../assets/image/HomeImg/photos3.png";
 import UrlImgfor from "../../assets/image/HomeImg/photos4.png";
 
+const store = useStore();
 const dataAuto = [
   {
     image: UrlImgOne,
@@ -300,7 +313,57 @@ const dataAuto = [
   },
 ];
 
+const props = defineProps({
+  dataSearchStore: {
+    type: Object,
+  },
+  dataAvailableCar: {
+    type: Array,
+  },
+  dataAllCar: {
+    type: Array,
+  },
+});
+
 const isVisible = ref(true);
+const dataAvailableCarByPlace = ref(props.dataAvailableCar);
+const dataStoreElt = store.state.search;
+const daysDifference = ref(0);
+
+watch(
+  () => props.dataAvailableCar,
+  (v) => {
+    dataAvailableCarByPlace.value = v;
+  },
+  { immediate: true, deep: true }
+);
+
+// watch(
+//   () => props.dataSearchStore,
+//   (v) => {
+//     dataStoreElt.value = v;
+//     console.log("miovaova", dataStoreElt.value);
+//   },
+//   { immediate: true, deep: true }
+// );
+
+onMounted(() => {
+  console.log("iooo", dataStoreElt);
+  if (dataStoreElt && store.state.pageLoad !== "menu") {
+    fetchDataStore();
+  }
+});
+
+function fetchDataStore() {
+  const departureDate = new Date(dataStoreElt.departure_date);
+  const returnDate = new Date(dataStoreElt.return_date);
+
+  const timeDifference = returnDate - departureDate;
+
+  daysDifference.value = Math.round(timeDifference / (1000 * 60 * 60 * 24));
+
+  console.log("day", daysDifference.value);
+}
 
 const handleClick = () => {
   isVisible.value = false;
@@ -391,7 +454,7 @@ const reserveBtn = () => {
 .divisp {
   color: rgba(0, 0, 0, 0.271);
 }
-.divisp:hover{
+.divisp:hover {
   color: #6dace6;
 }
 
@@ -501,7 +564,7 @@ const reserveBtn = () => {
 .img-container:hover .img-title {
   display: inline-block;
 }
-.modal-title{
+.modal-title {
   color: #333;
 }
 .spnicons {
@@ -509,42 +572,42 @@ const reserveBtn = () => {
 }
 @media only screen and (max-width: 1169px) {
   .divipric {
-  // background-color: red;
-  width: 100%;
-  margin-left: 0px;
-}
-.img-title {
-  width: 200%;
-}
+    // background-color: red;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .img-title {
+    width: 200%;
+  }
 }
 @media only screen and (max-width: 985px) {
-.img-title {
-  width: 350%;
-}
+  .img-title {
+    width: 350%;
+  }
 }
 @media only screen and (max-width: 766px) {
-.img-title {
-  width: 100%;
-}
+  .img-title {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 539px) {
-.img-title {
-  width: 110%;
-}
+  .img-title {
+    width: 110%;
+  }
 }
 @media only screen and (max-width: 459px) {
-.img-title {
-  width: 150%;
-}
+  .img-title {
+    width: 150%;
+  }
 }
 @media only screen and (max-width: 374px) {
-.img-title {
-  width: 250%;
-}
+  .img-title {
+    width: 250%;
+  }
 }
 @media only screen and (max-width: 342px) {
-.img-title {
-  width: 250%;
-}
+  .img-title {
+    width: 250%;
+  }
 }
 </style>

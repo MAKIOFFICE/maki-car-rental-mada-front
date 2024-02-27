@@ -47,12 +47,16 @@ import { useRouter } from 'vue-router';
 import Dropdown from '../Common/Dropdown.vue';
 import lang from '../../assets/icons/lang.svg';
 import langage from './langage.vue'
+import { useStore } from 'vuex';
+
+const store = useStore();
 const router = useRouter();
 
 const locationbtn = () => {
   router.push('/');
 }
 const handleBtn = async () => {
+  store.commit("setpageLoad", "menu");
   router.push('/about');
 }
 const faqBtn = () => {

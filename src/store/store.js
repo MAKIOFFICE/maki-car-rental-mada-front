@@ -3,12 +3,18 @@ import createPersistedState from 'vuex-persistedstate';
 
 const store = new Vuex.Store({
   state: {
-    search: null
+    search: null,
+    pageLoad: "menu",
   },
   mutations: {
-    setSearch(state, search) { state.search = search; }
+    setSearch(state, search) { state.search = search; },
+    setpageLoad(state, pageLoad) { state.pageLoad = pageLoad; },
   },
-  plugins: [createPersistedState()],
+  plugins: [createPersistedState(
+    {
+      paths: ['search'],
+    }
+  )],
 });
 
 export default store;

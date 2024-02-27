@@ -27,11 +27,15 @@
                     >Lieu de depart</label
                   >
                   <div class="divisionseardate">
-                    <select class="form-select formcont" @change="handleChange">
+                    <select
+                      name="departure_place"
+                      class="form-select formcont"
+                      @change="handleChange"
+                    >
                       <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="Majunga">Majunga</option>
+                      <option value="Antananarivo">Antananarivo</option>
+                      <option value="Toamasina">Toamasina</option>
                     </select>
                     <span class="spandate"
                       ><i class="bi bi-caret-down-fill"></i
@@ -47,7 +51,11 @@
                     >Lieu de retour</label
                   >
                   <div class="divisionseardate">
-                    <select class="form-select formcont" @change="handleChange">
+                    <select
+                      name="return_place"
+                      class="form-select formcont"
+                      @change="handleChange"
+                    >
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -70,7 +78,7 @@
                     <input
                       type="datetime-local"
                       class="form-control formcont"
-                      value="2022-01-01T12:00"
+                      name="departure_date"
                       @change="handleChange"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
@@ -88,7 +96,7 @@
                     <input
                       type="datetime-local"
                       class="form-control formcont"
-                      value="2022-01-01T12:00"
+                      name="return_date"
                       @change="handleChange"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
@@ -98,7 +106,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               <div class="ms-auto">
-                <button class="button" @click="VoitureBtn">
+                <button class="button" @click="clickCarBtn">
                   Afficher les offres ⇨
                 </button>
               </div>
@@ -164,27 +172,25 @@ import { useStore } from "vuex";
 
 const router = useRouter();
 const store = useStore();
-const params = ref({});
 const toast = useToast();
 
+const params = ref(null);
+// const params = ref(store.state.search);
+
 function handleChange(value) {
-  console.log("value input", value.target.value);
   const inputValue = value.target.value;
+  const inputName = value.target.name;
   params.value = {
     ...params.value,
-    inputValue,
+    [inputName]: inputValue,
   };
+  console.log("params", params.value);
 }
-const VoitureBtn = () => {
+const clickCarBtn = () => {
   try {
     store.commit("setSearch", params.value);
-  } catch (error) {
-    console.error(error);
-  } finally {
-    if (store.state.search) {
-      console.log(store.state.search);
-      router.push("/about");
-    } else {
+
+    if (!store.state.search) {
       toast.error("Il y a une erreur !", {
         position: "top-right",
         timeout: 5000,
@@ -194,12 +200,18 @@ const VoitureBtn = () => {
         draggable: true,
         draggablePercent: 0.6,
         showCloseButtonOnHover: false,
-        hideProgressBar: true,
+        hideProgressBar: false,
         closeButton: "button",
         icon: true,
         rtl: false,
       });
+    } else {
+      console.log(store.state.search);
+      store.commit("setpageLoad", "btn");
+      router.push("/about");
     }
+  } catch (error) {
+    console.error(error);
   }
 };
 </script>
