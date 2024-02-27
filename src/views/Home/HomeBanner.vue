@@ -29,10 +29,6 @@
                   <div class="divisionseardate">
                     <select
                       class="form-select formcont"
-                      aria-label="Default select example"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      data-bs-whatever="@mdo"
                     >
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
@@ -55,10 +51,6 @@
                   <div class="divisionseardate">
                     <select
                     class="form-select formcont"
-                      aria-label="Default select example"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      data-bs-whatever="@example"
                     >
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
