@@ -27,9 +27,7 @@
                     >Lieu de depart</label
                   >
                   <div class="divisionseardate">
-                    <select
-                      class="form-select formcont"
-                    >
+                    <select class="form-select formcont" @change="handleChange">
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -49,9 +47,7 @@
                     >Lieu de retour</label
                   >
                   <div class="divisionseardate">
-                    <select
-                    class="form-select formcont"
-                    >
+                    <select class="form-select formcont" @change="handleChange">
                       <option selected>Open this select menu</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -75,6 +71,7 @@
                       type="datetime-local"
                       class="form-control formcont"
                       value="2022-01-01T12:00"
+                      @change="handleChange"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
                   </div>
@@ -92,6 +89,7 @@
                       type="datetime-local"
                       class="form-control formcont"
                       value="2022-01-01T12:00"
+                      @change="handleChange"
                     />
                     <span class="spandate"><i class="bi bi-clock"></i></span>
                   </div>
@@ -100,7 +98,9 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               <div class="ms-auto">
-                <button class="button" @click="VoitureBtn">Afficher les offres ⇨</button>
+                <button class="button" @click="VoitureBtn">
+                  Afficher les offres ⇨
+                </button>
               </div>
             </div>
           </div>
@@ -158,10 +158,31 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import { ref } from "vue";
 
 const router = useRouter();
+const params = ref({});
+
+function handleChange(value) {
+  console.log("value input", value.target.value);
+  const inputValue = value.target.value;
+  params.value = {
+    ...params.value,
+    inputValue,
+  };
+}
 const VoitureBtn = () => {
-  router.push("/about");
+  try {
+    this.$store.commit("setSearch", params.value);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    if (store.state.search) {
+      console.log(store.state.search);
+      router.push("/about");
+    } else {
+    }
+  }
 };
 </script>
 
