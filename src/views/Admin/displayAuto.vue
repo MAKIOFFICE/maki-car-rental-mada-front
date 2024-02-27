@@ -238,7 +238,7 @@ const handleRemove = (index) => {
 
 const handleSubmitIm = () => {
   const imagesJSON = JSON.stringify(images.value);
-  console.log(imagesJSON);
+  // console.log(imagesJSON);
 };
 </script>
 <style scoped>
