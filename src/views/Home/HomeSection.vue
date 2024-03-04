@@ -4,8 +4,7 @@
       <div class="content">
         <h2 class="title">{{ $t("pourquoi") }}</h2>
         <p class="text">
-          Vous appréciez le professionnalisme, la transparence des prix, et les
-          voitures modernes..
+          {{ $t("appreciation") }}
           <!-- mais vous hésitez toujours à dépenser une fortune
           chez de grands groupes internationaux comme Europcar, Sixt ou Avis.
           Dans ce cas, vous devriez faire appel à nos services de location de
@@ -18,14 +17,12 @@
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
-              <h3 class="title-card">Exploration Facilitée de l'Île</h3>
+              <h3 class="title-card">{{ $t("facilite") }}</h3>
               <p>
-                Découvrez Madagascar à votre rythme avec une voiture de
-                location, explorant des côtes impressionnantes et des
-                destinations uniques, créant ainsi des souvenirs inoubliables.
+                {{ $t("decouverte") }}
               </p>
               <button @click="ContactBtn">
-                Je veux réserver une voiture ⇨
+                {{ $t("reserveAuto") }}
               </button>
             </div>
             <div class="image">
@@ -37,14 +34,12 @@
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
-              <h3 class="title-card">Exploration Personnalisée</h3>
+              <h3 class="title-card">{{ $t("exploration") }}</h3>
               <p>
-                Optez pour une location de voiture pour une exploration
-                personnalisée, permettant la découverte de plages isolées et de
-                sites d'intérêt uniques à Madagascar, adaptée à vos préférences.
+                {{ $t("personnel") }}
               </p>
               <button @click="ContactBtn">
-                Je veux réserver une voiture ⇨
+                {{ $t("reserveAuto") }}
               </button>
             </div>
             <div class="image">
@@ -56,15 +51,12 @@
           <!-- Contenu de la première colonne -->
           <div class="divcard">
             <div class="colorname">
-              <h3 class="title-card">Accès aux Lieux Authentiques</h3>
+              <h3 class="title-card">{{ $t("lieu") }}</h3>
               <p>
-                Utilisez votre voiture de location pour accéder à des magasins
-                locaux, découvrant ainsi la vraie Madagascar avec une immersion
-                dans la culture locale, tout en profitant de prix
-                plus abordables.
+                {{ $t("possibilite") }}
               </p>
               <button @click="ContactBtn">
-                Je veux réserver une voiture ⇨
+                {{ $t("reserveAuto") }}
               </button>
             </div>
             <div class="image">
@@ -107,7 +99,7 @@ img {
   background-color: #fff;
   height: 100%;
   border-radius: 12px;
-  box-shadow: 0px 10px 34px 0px rgba(82, 67, 194, 0.30);
+  box-shadow: 0px 10px 34px 0px rgba(82, 67, 194, 0.3);
 }
 .colorname {
   // background-color: red;
@@ -152,11 +144,11 @@ img {
   font-size: 20px;
 }
 @media only screen and (max-width: 573px) {
-  .title{
+  .title {
     text-align: center;
   }
   .divcont {
-  padding: 20px;
-}
+    padding: 20px;
+  }
 }
 </style>

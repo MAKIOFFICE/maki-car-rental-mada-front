@@ -225,7 +225,7 @@ const clickCarBtn = () => {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  min-height: 150vh;
+  min-height: 100vh;
   /* margin: 0; */
 }
 
@@ -294,6 +294,8 @@ h3 {
   position: relative;
   z-index: 20;
   cursor: pointer;
+  left: 15px;
+  font-size: 3rem;
   opacity: 0;
 }
 label {
