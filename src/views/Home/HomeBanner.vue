@@ -291,12 +291,13 @@ h3 {
   height: 50px;
 }
 .formcont::-webkit-calendar-picker-indicator {
-  position: relative;
+  position: absolute;
   z-index: 20;
   cursor: pointer;
-  left: 15px;
-  font-size: 3rem;
+  /* left: 15px; */
+  /* font-size: 3rem; */
   opacity: 0;
+  width: 100%;
 }
 label {
   font-weight: 500;

@@ -8,7 +8,7 @@
         <div class="container mt-4">
           <div class="row">
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone7" alt="icon" />
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone2" alt="icon" />
@@ -40,7 +40,7 @@
               </div>
             </div>
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone3" alt="icon" />
@@ -73,7 +73,7 @@
           </div>
           <div class="row">
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone5" alt="icon" />
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone6" alt="icon" />
@@ -101,7 +101,7 @@
               </div>
             </div>
             <div class="col-md-4 p-2">
-              <div class="listAv">
+              <div class="listAv" @click="tofaqpage">
                 <div class="divicn">
                   <span>
                     <img :src="icone4" alt="icon" />
@@ -144,6 +144,13 @@ import icone4 from "../../assets/icons/Frame4.svg";
 import icone5 from "../../assets/icons/Frame5.svg";
 import icone6 from "../../assets/icons/Frame6.svg";
 import icone7 from "../../assets/icons/Frame7.svg";
+
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const tofaqpage = () => {
+  router.push("/faq");
+};
 </script>
 
 <style lang="scss" scoped>
@@ -157,6 +164,7 @@ import icone7 from "../../assets/icons/Frame7.svg";
   padding: 10px 30px;
   border-radius: 15px;
   height: 100%;
+  cursor: pointer;
 }
 .btndiv {
   // background-color: coral;

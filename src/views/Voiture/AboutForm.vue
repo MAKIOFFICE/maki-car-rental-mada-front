@@ -190,10 +190,11 @@ const clickCarBtn = () => {
   height: 50px;
 }
 .formcont::-webkit-calendar-picker-indicator {
-  position: relative;
+  position: absolute;
   z-index: 20;
   cursor: pointer;
   opacity: 0;
+  width: 100%;
 }
 label {
   font-weight: 500;
