@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- {{ dataCar }} -->
+    <input type="datetime-local">
   </div>
 </template>
 <script setup>

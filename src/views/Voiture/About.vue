@@ -1,6 +1,6 @@
 <template>
   <div class="division">
-    <AboutForm />
+    <AboutForm @on-search="getAllCarByPlace" />
     <AboutIcone />
     <div class="container">
       <div class="row">
@@ -49,6 +49,7 @@ onMounted(() => {
 });
 
 async function getAllCarByPlace() {
+  console.log("888888888", dataStore);
   try {
     const response = await CarService.getCarListByPlace(
       dataStore.departure_place

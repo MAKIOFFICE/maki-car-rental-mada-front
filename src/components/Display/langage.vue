@@ -19,10 +19,19 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
-          <a class="dropdown-item" @click="changeLanguage('en')"> English</a>
+          <a class="dropdown-item" @click="changeLanguage('fr')">Français</a>
         </li>
         <li>
-          <a class="dropdown-item" @click="changeLanguage('fr')"> Français</a>
+          <a class="dropdown-item" @click="changeLanguage('en')">English</a>
+        </li>
+        <li>
+          <a class="dropdown-item" @click="changeLanguage('de')">Allemand</a>
+        </li>
+        <li>
+          <a class="dropdown-item" @click="changeLanguage('zh')">Chinese</a>
+        </li>
+        <li>
+          <a class="dropdown-item" @click="changeLanguage('es')">Espagnol</a>
         </li>
       </ul>
     </div>

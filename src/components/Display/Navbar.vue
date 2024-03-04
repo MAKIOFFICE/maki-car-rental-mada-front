@@ -19,7 +19,7 @@
               <a class="nav-link" @click="handleBtn">{{ $t("voiture") }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="faqBtn">FAQ</a>
+              <a class="nav-link" @click="faqBtn">{{ $t("faq") }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" @click="cvgBtn">{{ $t("cvg") }}</a>
@@ -35,7 +35,6 @@
             <p>EN</p>
           </div>
         </Dropdown> -->
-        
         <langage />
       </div>
     </nav>

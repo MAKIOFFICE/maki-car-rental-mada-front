@@ -14,9 +14,13 @@
               <select
                 class="form-select formcont"
                 aria-label="Default select example"
+                @change="handleChange"
+                name="departure_place"
               >
-                <option value="1">One</option>
-                <option value="2">Two</option>
+                <option selected>Open this select menu</option>
+                <option value="Majunga">Majunga</option>
+                <option value="Antananarivo">Antananarivo</option>
+                <option value="Toamasina">Toamasina</option>
               </select>
               <span class="spandate"
                 ><i class="bi bi-caret-down-fill"></i
@@ -33,6 +37,8 @@
               <select
                 class="form-select formcont"
                 aria-label="Default select example"
+                @change="handleChange"
+                name="return_place"
               >
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -52,8 +58,8 @@
               <input
                 type="datetime-local"
                 class="form-control formcont"
-                placeholder="Date de retour"
-                value="2022-01-01T12:00"
+                name="departure_date"
+                @change="handleChange"
               />
               <span class="spandate"><i class="bi bi-clock"></i></span>
             </div>
@@ -68,22 +74,75 @@
               <input
                 type="datetime-local"
                 class="form-control formcont"
-                placeholder="Date de depart"
-                value="2022-01-01T12:00"
+                name="return_date"
+                @change="handleChange"
               />
               <span class="spandate"><i class="bi bi-clock"></i></span>
             </div>
           </div>
         </div>
         <div class="custom-btn">
-          <button>NOUVELLE RECHERCHE</button>
+          <button @click="clickCarBtn">NOUVELLE RECHERCHE</button>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// import { useRouter } from "vue-router";
+import { ref } from "vue";
+import { useToast } from "vue-toastification";
+import { useStore } from "vuex";
+
+// const router = useRouter();
+const store = useStore();
+const toast = useToast();
+const emit = defineEmits(['onSearch']);
+
+const params = ref(null);
+// const params = ref(store.state.search);
+
+function handleChange(value) {
+  const inputValue = value.target.value;
+  const inputName = value.target.name;
+  params.value = {
+    ...params.value,
+    [inputName]: inputValue,
+  };
+  console.log("params", params.value);
+}
+const clickCarBtn = () => {
+  // alert('test')
+  try {
+    store.commit("setSearch", params.value);
+
+    if (!store.state.search) {
+      toast.error("Il y a une erreur !", {
+        position: "top-right",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: false,
+        closeButton: "button",
+        icon: true,
+        rtl: false,
+      });
+    } else {
+      console.log("heures",store.state.search);
+      store.commit("setpageLoad", "btn");
+      emit('onSearch');
+      // router.push("/");
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .head {

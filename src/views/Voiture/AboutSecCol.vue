@@ -112,7 +112,14 @@
         <!-- modal fin -->
         <!-- debut 1 -->
         <div v-if="!dataAvailableCarByPlace || !dataAvailableCarByPlace.length">
-          Tsisy data
+          <div class="divismess">
+            <div class="iconedivspanmess">
+              <span><i class="bi bi-exclamation-diamond"></i></span>
+            </div>
+            <div class="paramdivmess">
+              <p>Aucune voiture n'est disponible dans cet endroit pour le moment.</p>
+            </div>
+          </div>
         </div>
         <div
           v-else
@@ -203,7 +210,7 @@
 
                       <!-- span hover deb-->
 
-                      <span class="img-title" data-title="TrustPilot">
+                      <!-- <span class="img-title" data-title="TrustPilot">
                         <h5>name</h5>
                         <p>Price :prix - Moteur : moteur</p>
                         <div class="d-flex">
@@ -252,7 +259,7 @@
                             </ul>
                           </div>
                         </div>
-                      </span>
+                      </span> -->
                     </div>
                     <div class="divipric">
                       <p class="ppric">Pas de surcharge aéroport !</p>
@@ -569,6 +576,19 @@ const reserveBtn = () => {
 }
 .spnicons {
   font-size: 3rem;
+}
+.divismess{
+  min-height: 50px;
+  background-color: #f6bcc3;
+  display: flex;
+}
+.iconedivspanmess{
+  padding: 10px 10px 5px 20px;
+  font-size: 2rem;
+}
+.paramdivmess{
+  padding: 20px 10px 5px 10px;
+  /* top right bottom left */
 }
 @media only screen and (max-width: 1169px) {
   .divipric {
