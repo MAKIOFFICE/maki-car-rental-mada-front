@@ -225,7 +225,7 @@ const clickCarBtn = () => {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 150vh;
   /* margin: 0; */
 }
 
