@@ -19,16 +19,24 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li>
-          <a class="dropdown-item" @click="changeLanguage('fr')">Français</a>
+          <a class="dropdown-item" @click="changeLanguage('fr')"
+            >Français</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" @click="changeLanguage('en')">English</a>
+          <a class="dropdown-item" @click="changeLanguage('en')"
+            >English</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" @click="changeLanguage('de')">Allemand</a>
+          <a class="dropdown-item" @click="changeLanguage('de')"
+            >Allemand</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" @click="changeLanguage('zh')">Chinese</a>
+          <a class="dropdown-item" @click="changeLanguage('zh')"
+            >Chinese</a
+          >
         </li>
         <li>
           <a class="dropdown-item" @click="changeLanguage('es')">Espagnol</a>
@@ -49,7 +57,7 @@ const changeLanguage = (newLocale) => {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .dropdown-toggle {
   text-transform: uppercase;
 }
@@ -60,10 +68,23 @@ const changeLanguage = (newLocale) => {
   padding: 5px 15px;
   color: #4995dd;
 }
-.dropdown-item{
-    cursor: pointer;
+.dropdown-item {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  border-bottom: 1px solid #333;
 }
-.spanicn{
-    padding: 5px;
+.dropdown-item:hover {
+  color: #333;
+}
+.spanicn {
+  padding: 5px;
+}
+.dropdown-menu {
+  left: -67px;
+  background-color: #4995dd;
+  text-align: center;
+  padding: 0;
+  border-radius: 10px !important;
 }
 </style>
