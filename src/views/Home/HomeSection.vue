@@ -2,7 +2,7 @@
   <div>
     <div class="container divcont">
       <div class="content">
-        <h2 class="title">Pourquoi louer une voiture à Madagascar ?</h2>
+        <h2 class="title">{{ $t("pourquoi") }}</h2>
         <p class="text">
           Vous appréciez le professionnalisme, la transparence des prix, et les
           voitures modernes..

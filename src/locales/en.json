@@ -5,5 +5,18 @@
   "cvg": "CGV AND LEGAL NOTICES",
   "contact": "CONTACT US",
   "welcome": "Welcome to Maki Car Rental Madagascar",
-  "formulaireHome" : "Fill out this form to find out about our car rental offers"
+  "choisir": "Choose the precise model you want, benefit from an all-inclusive price and discover recent and very good quality cars.",
+  "formulaireHome": "Fill out this form to find out about our car rental offers",
+  "lieudepart": "Place of departure",
+  "lieuretour": "Return location",
+  "dateheuredepart": "Departure date and time",
+  "dateheureretour": "Return date and time",
+  "offres": "Show offers",
+  "assurances": "Back to back insurance",
+  "livraison": "Delivery",
+  "gps": "Free GPS",
+  "kilometrage": "Unlimited mileage",
+  "conducteur": "Additional driver",
+  "annulation": "Cancelling",
+  "pourquoi": "Why rent a car in Madagascar?"
 }

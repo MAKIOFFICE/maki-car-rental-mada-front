@@ -6,35 +6,35 @@
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-shield-check"></i></h1>
-            <p>Assurance tous risques</p>
+            <p>{{ $t("assurances") }}</p>
           </div>
         </div>
         <!-- two -->
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-truck"></i></h1>
-            <p>Livraison</p>
+            <p>{{$t("livraison")}}</p>
           </div>
         </div>
         <!-- three -->
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-geo-alt"></i></h1>
-            <p>GPS gratuit</p>
+            <p>{{ $t("gps") }}</p>
           </div>
         </div>
         <!-- four -->
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-speedometer"></i></h1>
-            <p>Kilométrage illimité</p>
+            <p>{{ $t("kilometrage") }}</p>
           </div>
         </div>
         <!-- five -->
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-person-plus-fill"></i></h1>
-            <p>Conducteur additionnel
+            <p>{{$t("conducteur")}}
                  <!-- offert -->
                 </p>
           </div>
@@ -43,7 +43,7 @@
         <div class="col-md-2 col-sm-4">
           <div class="stepBox text-center">
             <h1><i class="bi bi-clock"></i></h1>
-            <p>Annulation gratuite 
+            <p>{{$t("annulation")}} 
                 <!-- jusqu'à 48 heures avant la livraison. -->
             </p>
           </div>
@@ -55,8 +55,8 @@
 <script setup></script>
 <style lang="scss" scoped>
 .divcont {
-  // padding: 10px 50px;
-  margin-top: 80px;
+  padding-top: 80px;
+  // margin-top: 80px;
 }
 .row {
   align-items: stretch;

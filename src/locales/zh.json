@@ -5,5 +5,18 @@
   "cvg": "CGV 和法律聲明",
   "contact": "聯絡我們",
   "welcome": "歡迎來到馬達加斯加 Maki 租車",
-  "formulaireHome": "填寫此表格以了解我們的汽車租賃優惠"
+  "choisir": "選擇您想要的精確型號，享受全包價格並發現最新且品質非常好的汽車",
+  "formulaireHome": "填寫此表格以了解我們的汽車租賃優惠",
+  "lieudepart": "出發地點",
+  "lieuretour": "返回地點",
+  "dateheuredepart": "出發日期和時間",
+  "dateheureretour": "返回日期和時間",
+  "offres": "顯示優惠",
+  "assurances": "背靠背保險",
+  "livraison": "送貨",
+  "gps": "免費全球定位系統",
+  "kilometrage": "不限里程",
+  "conducteur": "額外的駕駛員",
+  "annulation": "取消",
+  "pourquoi": "為什麼在馬達加斯加租車？"
 }

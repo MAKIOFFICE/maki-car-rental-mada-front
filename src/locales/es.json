@@ -1,9 +1,22 @@
 {
-    "location": "ALQUILER DE COCHES EN MADAGASCAR",
-    "voiture": "COCHES Y PRECIOS",
-    "faq": "Preguntas frecuentes",
-    "cvg": "CGV Y AVISOS LEGALES",
-    "contact": "CONTÁCTENOS",
-    "welcome": "Bienvenido a Maki Car Rental Madagascar",
-    "formulaireHome" : "Rellena este formulario para conocer nuestras ofertas de alquiler de coches"
-  }
+  "location": "ALQUILER DE COCHES EN MADAGASCAR",
+  "voiture": "COCHES Y PRECIOS",
+  "faq": "Preguntas frecuentes",
+  "cvg": "CGV Y AVISOS LEGALES",
+  "contact": "CONTÁCTENOS",
+  "welcome": "Bienvenido a Maki Car Rental Madagascar",
+  "choisir": "Elija el modelo preciso que desee, benefíciese de un precio todo incluido y descubra coches recientes y de muy buena calidad.",
+  "formulaireHome": "Rellena este formulario para conocer nuestras ofertas de alquiler de coches",
+  "lieudepart": "Lugar de salida",
+  "lieuretour": "Ubicación de regreso",
+  "dateheuredepart": "Fecha y hora de salida",
+  "dateheureretour": "Fecha y hora de regreso",
+  "offres": "Mostrar ofertas",
+  "assurances": "Seguro espalda con espalda",
+  "livraison": "Entrega",
+  "gps": "GPS gratis",
+  "kilometrage": "Kilometraje ilimitado",
+  "conducteur": "Conductor adicional",
+  "annulation": "Cancelación",
+  "pourquoi": "¿Por qué alquilar un coche en Madagascar?"
+}

@@ -5,9 +5,7 @@
         <div class="header text-center">
           <h1>{{ $t("welcome") }}</h1>
           <p>
-            Choisissez le modèle précis que vous souhaitez, profitez d'un prix
-            tout compris et découvrez des voitures récentes et de très bonne
-            qualité.
+            {{ $t("choisir") }}
           </p>
         </div>
       </div>
@@ -24,7 +22,7 @@
               <div class="col">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Lieu de depart</label
+                    >{{ $t("lieudepart")}}</label
                   >
                   <div class="divisionseardate">
                     <select
@@ -48,7 +46,7 @@
               <div class="col">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Lieu de retour</label
+                    >{{$t("lieuretour")}}</label
                   >
                   <div class="divisionseardate">
                     <select
@@ -72,7 +70,7 @@
               <div class="col">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Date et heure de depart</label
+                    >{{$t("dateheuredepart")}}</label
                   >
                   <div class="divisionseardate">
                     <input
@@ -90,7 +88,7 @@
               <div class="col">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
-                    >Date et heure de retour</label
+                    >{{ $t("dateheureretour") }}</label
                   >
                   <div class="divisionseardate">
                     <input
@@ -107,7 +105,7 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
               <div class="ms-auto">
                 <button class="button" @click="clickCarBtn">
-                  Afficher les offres ⇨
+                  {{$t("offres")}}
                 </button>
               </div>
             </div>
@@ -228,6 +226,7 @@ const clickCarBtn = () => {
   background-position: center top;
   background-size: cover;
   min-height: 90vh;
+  /* margin: 0; */
 }
 
 h1 {
@@ -299,5 +298,6 @@ h3 {
 }
 label {
   font-weight: 500;
+  white-space: nowrap;
 }
 </style>
