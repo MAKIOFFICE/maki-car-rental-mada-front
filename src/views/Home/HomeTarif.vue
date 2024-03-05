@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container divcont mt-5 mb-5 tarif">
-      <h1>Tarif à la semaine</h1>
+      <h1>{{ $t("tarif") }}</h1>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         <div class="col" v-for="(item, index) in dataAuto" :key="index">
           <div class="cardOn">

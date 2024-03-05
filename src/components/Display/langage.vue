@@ -30,16 +30,8 @@
         </li>
         <li>
           <a class="dropdown-item" @click="changeLanguage('de')"
-            >Allemand</a
+            >Deutsch</a
           >
-        </li>
-        <li>
-          <a class="dropdown-item" @click="changeLanguage('zh')"
-            >Chinese</a
-          >
-        </li>
-        <li>
-          <a class="dropdown-item" @click="changeLanguage('es')">Espagnol</a>
         </li>
       </ul>
     </div>

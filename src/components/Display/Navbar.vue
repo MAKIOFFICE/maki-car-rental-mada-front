@@ -1,19 +1,28 @@
 <template>
   <div>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbarcode">
-      <div class="container-fluid navsticky">
-        <a class="navbar-brand" @click="locationbtn"><img src="https://d12ittivwictyd.cloudfront.net/images/logo.png"
-            alt="Maki Car Rental Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" @click="locationbtn"
+          ><img
+            src="https://d12ittivwictyd.cloudfront.net/images/logo.png"
+            alt="Maki Car Rental Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <!-- <span class="navbar-toggler-icon"></span> -->
           <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " @click="locationbtn">{{ $t("location") }}</a>
+              <a class="nav-link" @click="locationbtn">{{ $t("location") }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" @click="handleBtn">{{ $t("voiture") }}</a>
@@ -40,42 +49,42 @@
     </nav>
   </div>
 </template>
-  
+
 <script setup>
-import { useRouter } from 'vue-router';
-import Dropdown from '../Common/Dropdown.vue';
-import lang from '../../assets/icons/lang.svg';
-import langage from './langage.vue'
-import { useStore } from 'vuex';
+import { useRouter } from "vue-router";
+import Dropdown from "../Common/Dropdown.vue";
+import lang from "../../assets/icons/lang.svg";
+import langage from "./langage.vue";
+import { useStore } from "vuex";
 
 const store = useStore();
 const router = useRouter();
 
 const locationbtn = () => {
-  router.push('/');
-}
+  router.push("/");
+};
 const handleBtn = async () => {
   store.commit("setpageLoad", "menu");
-  router.push('/about');
-}
+  router.push("/about");
+};
 const faqBtn = () => {
-  router.push('/faq');
-}
+  router.push("/faq");
+};
 const cvgBtn = () => {
-  router.push('/cvg');
-}
+  router.push("/cvg");
+};
 const contactBtn = () => {
-  router.push('/contact');
-}
+  router.push("/contact");
+};
 </script>
-  
-<style lang='scss' scoped>
+
+<style lang="scss" scoped>
 .lang-dropdown {
   display: flex;
   align-items: center;
   gap: 8px;
 
-  @media (min-width : 480px) {
+  @media (min-width: 480px) {
     width: 80px;
   }
 
@@ -99,7 +108,6 @@ a:hover {
   display: inline-block;
 }
 
-
 .divispaa {
   padding: 8px;
 }
@@ -118,7 +126,6 @@ a:hover {
 .Lspa {
   color: #fff;
 }
-
 
 .navbarcode {
   background-color: #fff;

@@ -12,14 +12,11 @@
               <div class="row">
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la première colonne -->
-                  <h2>Avantages</h2>
+                  <h2>{{ $t("avantages") }}</h2>
                   <p>
-                    Aux Madagascar, toutes les locations de voitures effectuées
-                    via notre site incluent un GPS gratuit. Cette inclusion
-                    offre aux voyageurs un avantage pratique pour explorer l'île
-                    en toute facilité.
+                    {{ $t("avantagesOne") }}
                   </p>
-                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                  <button class="button" @click="VoitureBtn">{{ $t("reserve") }}</button>
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
@@ -33,14 +30,11 @@
               <div class="row">
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la première colonne -->
-                  <h2>Conseils locaux</h2>
+                  <h2>{{ $t("conseil") }}</h2>
                   <p>
-                    Malgré les avis de certains locaux et habitués affirmant
-                    qu'un GPS n'est pas nécessaire aux Madagascar, il peut
-                    néanmoins s'avérer précieux, en particulier pour les
-                    nouveaux visiteurs.
+                    {{ $t("conseilOne") }}
                   </p>
-                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                  <button class="button" @click="VoitureBtn">{{ $t("reserve") }}</button>
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->
@@ -54,14 +48,11 @@
               <div class="row">
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la première colonne -->
-                  <h2>Utilité du GPS</h2>
+                  <h2>{{ $t("utile") }}</h2>
                   <p>
-                    Pour ceux découvrant l'île pour la première fois, un GPS
-                    peut se révéler particulièrement utile. En effet, lors de
-                    votre arrivée, avoir un moyen fiable de navigation peut
-                    simplifier le trajet de l'aéroport à votre lieu de séjour.
+                    {{ $t("utileOne") }}
                   </p>
-                  <button class="button" @click="VoitureBtn">Réserver maintenant</button>
+                  <button class="button" @click="VoitureBtn">{{ $t("reserve") }}</button>
                 </div>
                 <div class="col-md-6 colonne1">
                   <!-- Contenu de la deuxième colonne -->

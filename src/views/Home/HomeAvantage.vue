@@ -3,7 +3,7 @@
     <div class="container divcont">
       <div class="head">
         <div class="btndiv">
-          <h1>Les plus de notre service</h1>
+          <h1>{{ $t("plus") }}</h1>
         </div>
         <div class="container mt-4">
           <div class="row">
@@ -15,10 +15,9 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>GPS gratuit</h1>
+                  <h1>{{ $t("gps") }}</h1>
                   <p>
-                    GPS offert gratuitement pour toute location de voiture
-                    effectué sur notre site.
+                    {{ $t("gpsOne") }}
                   </p>
                 </div>
               </div>
@@ -31,10 +30,9 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Flexibilité Assurée</h1>
+                  <h1>{{ $t("flex") }}</h1>
                   <p>
-                    Aucun frais d'annulation jusqu'à 48 heures avant la date de
-                    livraison
+                    {{$t("flexOne")}}
                   </p>
                 </div>
               </div>
@@ -47,10 +45,9 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Choix Personnalisé</h1>
+                  <h1>{{ $t("choix") }}</h1>
                   <p>
-                    Vous pouvez réserver un modèle précis, pas juste une
-                    catégorie
+                    {{ $t("choixOne") }}
                   </p>
                 </div>
               </div>
@@ -80,9 +77,9 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Conduite Sans Surprise</h1>
+                  <h1>{{ $t("drive") }}</h1>
                   <p>
-                    Pas de frais supplémentaire pour les voitures automatiques
+                    {{$t("driveOne")}}
                   </p>
                 </div>
               </div>
@@ -95,8 +92,8 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Transparence Totale</h1>
-                  <p>Prix tout compris, aucun frais caché.</p>
+                  <h1>{{ $t("transparence") }}</h1>
+                  <p>{{ $t("transparenceOne") }}</p>
                 </div>
               </div>
             </div>
@@ -108,9 +105,9 @@
                   </span>
                 </div>
                 <div class="divtitle">
-                  <h1>Exclusivité et Excellence</h1>
+                  <h1>{{ $t("exclusif") }}</h1>
                   <p>
-                    Uniquement des voitures récentes et de très bonne qualité
+                    {{ $t("exclusifOne") }}
                   </p>
                 </div>
               </div>
